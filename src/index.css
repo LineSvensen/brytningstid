@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-white: #ffffff;
+}
+
+
+/* Basic generell design for hele nettsiden */
