@@ -1,4 +1,3 @@
-
 //EKSEMPEL OPPSETT
 //
 import { Routes, Route } from "react-router-dom";
@@ -15,8 +14,6 @@ import { Routes, Route } from "react-router-dom";
 // import NotFound from "./Pages/NotFound";
 // import Personvern from "./Pages/Personvern";
 
-
-
 // function App() {
 //   return (
 //     <>
@@ -24,15 +21,7 @@ import { Routes, Route } from "react-router-dom";
 //       <Routes>
 //         <Route path="/" element={<Layout />}>
 //           <Route index element={<Hjem />} />
-//           <Route path="om-meg" element={<OmMeg />} />
-//           <Route path="diktboker" element={<Diktboker />} />
-//           <Route path="diktboker/:slug" element={<EnkeltProdukt />} />
-//           <Route path="kontakt" element={<Kontakt />} />
-//           <Route path="gjestebok" element={<Gjestebok />} />
-//           <Route path="presse" element={<Presse />} />
-//           <Route path="handmade" element={<Handmade />} />
-//           <Route path="NotFound" element={<NotFound />} />
-//           <Route path="personvern" element={<Personvern />} />
+
 //         </Route>
 //       </Routes>
 //     </>
