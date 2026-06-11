@@ -1,6 +1,7 @@
 //EKSEMPEL OPPSETT
 //
 import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 // import ScrollToTop from "./Components/ScrollToTop";
 // import Layout from "./Layout";
 // import Hjem from "./Pages/Hjem";
@@ -14,18 +15,14 @@ import { Routes, Route } from "react-router-dom";
 // import NotFound from "./Pages/NotFound";
 // import Personvern from "./Pages/Personvern";
 
-// function App() {
-//   return (
-//     <>
-//       <ScrollToTop />
-//       <Routes>
-//         <Route path="/" element={<Layout />}>
-//           <Route index element={<Hjem />} />
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route index element={<Home />} />
+      </Routes>
+    </>
+  );
+}
 
-//         </Route>
-//       </Routes>
-//     </>
-//   );
-// }
-
-// export default App;
+export default App;
