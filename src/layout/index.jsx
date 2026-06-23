@@ -1,18 +1,18 @@
-import Header from "./Header";
+
+import HeaderNav from "./Header";
+import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 
-const Layout = ({ children }) => {
+export default function Layout() {
+  console.log("Layout rendered");
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
-
-      <main className="grow">
-        {children}
+    <div className="">
+      <HeaderNav />
+      <main className="">
+        <Outlet />
+        <Footer />
       </main>
-
-      <Footer />
     </div>
   );
-};
-
-export default Layout;
+}
