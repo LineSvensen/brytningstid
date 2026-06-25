@@ -43,6 +43,7 @@ export default function Home() {
       <div className="relative z-30  ">
         <SecThree />
         <div className="absolute top-0 left-0 z-40 w-full h-96 bg-gradient-to-t from-transparent to-black pointer-events-none" />
+        <div className="absolute bottom-0 left-0 z-30 w-full h-96 bg-gradient-to-b from-transparent to-black pointer-events-none" />
       </div>
 
       {/* <Section bg={bg1} />
