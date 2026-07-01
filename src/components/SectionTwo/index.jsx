@@ -4,7 +4,7 @@ export default function SecTwo() {
   return (
     <>
       <section
-        className="min-h-screen bg-fixed bg-center bg-cover flex items-center justify-center"
+        className="min-h-screen bg-fixed bg-bottom bg-cover flex items-center justify-center"
         style={{ backgroundImage: `url(${bg2})` }}
       >
         <h1 className="text-white text-5xl font-bold">Overskrift 2</h1>
