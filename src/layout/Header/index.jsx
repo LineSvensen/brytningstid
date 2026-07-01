@@ -43,7 +43,7 @@ export default function HeaderNav() {
   );
 
   return (
-    <header className="fixed top-6 left-0 z-50 w-full flex  pl-4 text-white">
+    <header className="fixed top-6 left-3 z-50 w-full flex  pl-4 text-white">
       {!collapsed ? (
         <nav className="px-4 py-4 lg:px-8 lg:py-6 text-sm">
           <div className="flex flex-col lg:flex-row text-left gap-1 lg:gap-20 lg:items-center lg:text-center">
@@ -64,7 +64,7 @@ export default function HeaderNav() {
           </button>
 
           {open && (
-            <nav className="absolute top-14 right-0 bg-black/70 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-lg min-w-56">
+            <nav className="absolute top-19 left-5 bg-black/70 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-lg min-w-56">
               <div className="flex flex-col gap-3 text-sm text-left">
                 {links}
               </div>

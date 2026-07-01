@@ -4,10 +4,10 @@ export default function SecThree() {
   return (
     <>
       <section
-        className="min-h-screen bg-fixed bg-center bg-cover flex items-center justify-center"
+        className="min-h-screen  bg-fixed bg-bottom bg-cover flex items-center justify-center"
         style={{ backgroundImage: `url(${bg3})` }}
       >
-        <h1 className="text-white text-5xl font-bold">Overskrift 3</h1>
+        <h1 className="text-white  text-5xl font-bold">Overskrift 3</h1>
       </section>
 
       <section className="min-h-screen bg-black text-white flex items-center justify-center">
