@@ -10,8 +10,8 @@ export default function SecThree() {
         <h1 className="text-white  text-5xl font-bold">Overskrift 3</h1>
       </section>
 
-      <section className="min-h-screen bg-black text-white flex items-center justify-center">
-        <p className="max-w-2xl text-xl">Innhold 3</p>
+      <section className="min-h-screen bg-amber-700 text-white flex items-center justify-center">
+        <p className="max-w-2xl   text-xl">Innhold 3</p>
       </section>
     </>
   );
