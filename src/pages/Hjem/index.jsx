@@ -31,12 +31,12 @@ export default function Home() {
       <Herobanner />
       <div className="relative z-10">
         <SecOne />
-        <div className="absolute bottom-0 left-0 z-20 w-full h-96 bg-gradient-to-b from-transparent to-[#030c1e] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 z-20 w-full h-96   pointer-events-none" />
       </div>
 
       <div className="relative z-20  ">
         <SecTwo />
-        <div className="absolute top-0 left-0 z-30 w-full h-96 bg-gradient-to-t from-transparent to-[#030c1e] pointer-events-none" />
+        <div className="absolute top-0 left-0 z-30 w-full h-96 bg-gradient-to-t from-transparent to-black pointer-events-none" />
         <div className="absolute bottom-0 left-0 z-30 w-full h-96 bg-gradient-to-b from-transparent to-black pointer-events-none" />
       </div>
 
