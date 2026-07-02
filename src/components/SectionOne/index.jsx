@@ -11,13 +11,12 @@ export default function SecOne() {
         <h1 className="text-white text-5xl font-bold">Overskrift 1</h1>
       </section>
 
-      <div className="flex justify-center items-center p-6 bg-black min-h-screen ">
+      <div className="flex justify-center items-center px-4 pb-4 pt-4 md:pt-20  bg-black   ">
         <div className="w-full   overflow-hidden rounded-md shadow-lg bg-transparent ">
           {/* 2. Bind the imported variable to the src attribute */}
           <video
             className="w-full h-auto mx-auto aspect-video rounded-sm object-cover max-w-4xl"
             controls
-            autoPlay
             muted
             loop
           >
