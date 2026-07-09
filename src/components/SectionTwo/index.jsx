@@ -1,4 +1,5 @@
 import bg2 from "../../assets/bluebg.webp";
+import sampleVideo from "../../assets/test-hero.webm";
 
 export default function SecTwo() {
   return (
@@ -10,8 +11,21 @@ export default function SecTwo() {
         <h1 className="text-white text-5xl font-bold">Overskrift 2</h1>
       </section>
 
-      <section className="min-h-screen bg-black text-white flex items-center justify-center">
-        <p className="max-w-2xl text-xl">Innhold 2.</p>
+      <section className="flex justify-center items-center px-4 pb-4 pt-4   bg-black">
+        <div className="flex justify-center items-center px-4 pb-4 pt-4    bg-black   ">
+          <div className="w-full   overflow-hidden rounded-md shadow-lg bg-transparent ">
+            {/* 2. Bind the imported variable to the src attribute */}
+            <video
+              className="w-full h-auto mx-auto aspect-video rounded-sm object-cover max-w-4xl"
+              controls
+              muted
+              loop
+            >
+              <source src={sampleVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
       </section>
     </>
   );
