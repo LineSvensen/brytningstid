@@ -23,10 +23,22 @@ export default function Herobanner() {
         <h1 className=" text-4xl sm:text-6xl lg:text-8xl font-bold">
           Brytningstid
         </h1>
-        <h2 className="text-2xl lg:text-5xl font-bold sm:pt-8 mt-4 flex flex-row gap-4 items-center">
-          <FaPlay className="text-3xl lg:text-6xl" />
-          Se trailer
-        </h2>
+
+        <button
+          onClick={() => {
+            document.getElementById("trailer")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            setOpen(false);
+          }}
+          className="px-2 py-1 text-left cursor-pointer"
+        >
+          <h2 className="text-2xl lg:text-5xl font-bold sm:pt-8 mt-4 flex flex-row gap-4 items-center">
+            <FaPlay className="text-3xl lg:text-6xl" />
+            Se trailer
+          </h2>
+        </button>
       </div>
     </section>
   );

@@ -17,9 +17,6 @@ export default function DirSec() {
               og personlig blikk søker han å fortelle historier som åpner for
               gjenkjennelse, refleksjon og større forståelse mellom mennesker.
             </p>
-            <p className="pt-4 pb-4 md:pb-0">
-              jakobsvensen700@gmail.com / +47 465 40 448
-            </p>
           </div>
 
           <img src={jhImg} className="w-60 md:w-90  "></img>

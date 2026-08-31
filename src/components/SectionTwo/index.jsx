@@ -8,15 +8,18 @@ export default function SecTwo() {
         className="min-h-screen bg-fixed bg-bottom bg-cover flex items-center justify-center"
         style={{ backgroundImage: `url(${bg2})` }}
       >
-        <h1 className="text-white text-5xl font-bold">Overskrift 2</h1>
+        <h2 className="text-white text-5xl font-bold"></h2>
       </section>
 
-      <section className="flex justify-center items-center px-4 pb-4 pt-4   bg-black">
+      <section
+        id="trailer"
+        className="flex justify-center items-center px-4 pb-4 pt-4   bg-black"
+      >
         <div className="flex justify-center items-center px-4 pb-4 pt-4    bg-black   ">
           <div className="w-full   overflow-hidden rounded-md shadow-lg bg-transparent ">
             {/* 2. Bind the imported variable to the src attribute */}
             <video
-              className="w-full h-auto mx-auto aspect-video rounded-sm object-cover max-w-4xl"
+              className="w-full mt-50 sm:mt-20 h-auto mx-auto aspect-video rounded-sm object-cover max-w-4xl"
               controls
               muted
               loop
