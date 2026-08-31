@@ -36,8 +36,9 @@ export default function Home() {
 
       <div className="relative z-20  ">
         <SecTwo />
-        <div className="absolute top-0 left-0 z-30 w-full h-96 bg-gradient-to-t from-transparent to-black pointer-events-none" />
-        <div className="absolute bottom-0 left-0 z-30 w-full h-96 bg-gradient-to-b from-transparent to-black pointer-events-none" />
+        <div className="absolute top-0 left-0 z-30 w-full h-96 " />
+        {/*For skygge:  bg-gradient-to-t from-transparent to-black pointer-events-none */}
+        <div className="absolute bottom-0 left-0 z-20 w-full h-96   pointer-events-none" />
       </div>
 
       <div className="relative z-30  ">

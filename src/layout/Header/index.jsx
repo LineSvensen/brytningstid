@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GrClose } from "react-icons/gr";
@@ -24,9 +24,18 @@ export default function HeaderNav() {
 
   const links = (
     <>
-      <NavLink to="/" className="px-2 py-1" onClick={() => setOpen(false)}>
-        Se trailer
-      </NavLink>
+      <button
+        onClick={() => {
+          document.getElementById("trailer")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+          setOpen(false);
+        }}
+        className="px-2 py-1 text-left cursor-pointer"
+      >
+        Se Trailer
+      </button>
 
       <NavLink to="/om" className="px-2 py-1" onClick={() => setOpen(false)}>
         Om Jakob Hardeberg
