@@ -1,6 +1,7 @@
 import bg3 from "../../assets/bg-03.webp";
 import DirSec from "../DirectorSection";
 import ContactSec from "../ContactSection";
+import { SponsSec } from "../Sponsors";
 
 export default function SecThree() {
   return (
@@ -14,6 +15,9 @@ export default function SecThree() {
 
       <section className="min-h-screen  bg-olive-200 text-black flex flex-col items-center justify-center">
         <DirSec />
+      </section>
+      <section className="">
+        <SponsSec />
       </section>
       <section className="min-h-[300px] bg-olive-100 text-black flex flex-col items-center justify-center">
         <ContactSec />
