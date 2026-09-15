@@ -19,7 +19,7 @@ export default function SecThree() {
       <section className="">
         <SponsSec />
       </section>
-      <section className="min-h-[300px] bg-olive-100 text-black flex flex-col items-center justify-center">
+      <section className="min-h-75 bg-olive-100 text-black flex flex-col items-center justify-center">
         <ContactSec />
       </section>
     </>
