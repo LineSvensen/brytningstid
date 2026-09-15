@@ -19,9 +19,9 @@ export default function Herobanner() {
 
       <div className="absolute inset-0 " />
 
-      <div className="relative z-10 py-20 px-6  sm:p-16 text-white">
-        <h1 className=" text-4xl sm:text-6xl lg:text-8xl font-bold">
-          Brytningstid
+      <div className="relative z-10 py-20 px-6  sm:p-16 text-yellow-400">
+        <h1 className=" text-4xl sm:text-6xl lg:text-8xl font-bold font-['Times_New_Roman']">
+          BRYTNINGSTID
         </h1>
 
         <button
@@ -34,8 +34,8 @@ export default function Herobanner() {
           }}
           className="px-2 py-1 text-left cursor-pointer"
         >
-          <h2 className="text-2xl lg:text-5xl font-bold sm:pt-8 mt-4 flex flex-row gap-4 items-center">
-            <FaPlay className="text-3xl lg:text-6xl" />
+          <h2 className="text-2xl lg:text-2xl sm:pt-8 mt-1 flex flex-row gap-4 items-center">
+            <FaPlay className="text-3xl lg:text-4xl" />
             Se trailer
           </h2>
         </button>
