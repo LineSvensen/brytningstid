@@ -4,8 +4,12 @@
   --color-white: #ffffff;
 } */
 
-* {
-  outline: 1px solid red !important;
+html {
+  background-color: black;
+}
+
+body {
+  background-color: black;
 }
 
 /* #root {
