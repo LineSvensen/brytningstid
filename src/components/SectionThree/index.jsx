@@ -7,7 +7,7 @@ export default function SecThree() {
   return (
     <>
       <section
-        className="min-h-[100dvh] bg-scroll md:bg-fixed bg-bottom bg-cover flex items-center justify-center"
+        className="min-h-[100dvh]  bg-fixed bg-bottom bg-cover flex items-center justify-center"
         style={{ backgroundImage: `url(${bg3})` }}
       >
         <h2 className="text-white  text-5xl font-bold"></h2>
