@@ -8,8 +8,7 @@ export default function SecTwo() {
         className="
           relative
           min-h-[100dvh]
-          bg-scroll
-          md:bg-fixed
+           bg-fixed
           bg-bottom
           bg-cover
           flex
