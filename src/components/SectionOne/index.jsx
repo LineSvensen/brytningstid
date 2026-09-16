@@ -1,17 +1,33 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import bg1 from "../../assets/pinkbg.webp";
 
 export default function SecOne() {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Parallax: bildet beveger seg saktere enn siden
+  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+
   return (
     <>
       <section
-        className="min-h-[100svh] flex flex-col bg-fixed bg-bottom bg-cover"
-        style={{ backgroundImage: `url(${bg1})` }}
+        ref={sectionRef}
+        className="relative min-h-screen overflow-hidden"
       >
-        {/* <h1 className="text-white text-5xl font-bold">Overskrift 1</h1> */}
+        <motion.img
+          src={bg1}
+          alt=""
+          style={{ y }}
+          className="absolute -top-[15%] left-0 w-full h-[130%] object-cover object-bottom"
+        />
       </section>
 
-      <div className="flex justify-center items-center px-4 pb-4 pt-4 md:pt-20 bg-[#EDCBBC] ">
-        {/* style={{ backgroundImage: `url(${bg1})` }} */}
+      <div className="flex justify-center items-center px-4 pb-4 pt-4 md:pt-20 bg-[#EDCBBC]">
         <p className="text-[#483F52] text-center max-w-5xl text-2xl sm:text-4xl p-4 md:pb-20">
           I Brytningstid møter vi 16 år gamle Billie, Angelo og Erik som står
           midt i overgangen mellom barn og voksen. Filmen undersøker hvordan de
@@ -23,4 +39,13 @@ export default function SecOne() {
       </div>
     </>
   );
+}
+
+{
+  /* <section
+  className="min-h-[100svh] flex flex-col bg-fixed bg-bottom bg-cover"
+  style={{ backgroundImage: `url(${bg1})` }}
+>
+
+</section>; */
 }
