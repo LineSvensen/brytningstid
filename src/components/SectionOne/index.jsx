@@ -4,7 +4,7 @@ export default function SecOne() {
   return (
     <>
       <section
-        className="min-h-[100dvh] flex flex-col bg-fixed bg-bottom bg-cover"
+        className="min-h-[100svh] flex flex-col bg-fixed bg-bottom bg-cover"
         style={{ backgroundImage: `url(${bg1})` }}
       >
         {/* <h1 className="text-white text-5xl font-bold">Overskrift 1</h1> */}
