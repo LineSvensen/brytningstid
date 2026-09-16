@@ -1,53 +1,27 @@
-import { useEffect, useRef, useState } from "react";
-
 import bg2 from "../../assets/bluebg.webp";
 import sampleVideo from "../../assets/test-hero.webm";
 
 export default function SecTwo() {
-  const sectionRef = useRef(null);
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-
-      const rect = sectionRef.current.getBoundingClientRect();
-
-      // Bildet beveger seg saktere enn scrollingen
-      setOffset(rect.top * -0.15);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <>
       <section
-        ref={sectionRef}
-        className="relative min-h-[100dvh] overflow-hidden flex items-center justify-center"
+        className="
+          relative
+          min-h-[100dvh]
+          bg-scroll
+          md:bg-fixed
+          bg-bottom
+          bg-cover
+          flex
+          items-center
+          justify-center
+        "
+        style={{ backgroundImage: `url(${bg2})` }}
       >
-        {/* PARALLAX-BILDET */}
-        <div
-          className="absolute -inset-y-24 left-0 right-0 bg-cover bg-bottom will-change-transform"
-          style={{
-            backgroundImage: `url(${bg2})`,
-            transform: `translateY(${offset}px)`,
-          }}
-        />
-
-        {/* Eventuelt innhold */}
-        <div className="relative z-10">
-          <h2 className="text-white text-5xl font-bold"></h2>
-        </div>
-
         {/* Fade til svart */}
-        <div className="absolute bottom-0 left-0 z-20 w-full h-96 bg-gradient-to-b from-transparent to-black pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-b from-transparent to-black pointer-events-none" />
       </section>
 
-      {/* TRAILER */}
       <section
         id="trailer"
         className="relative bg-black flex justify-center items-center px-4 pb-4 pt-4"
@@ -59,6 +33,7 @@ export default function SecTwo() {
               controls
               muted
               loop
+              playsInline
             >
               <source src={sampleVideo} type="video/webm" />
               Your browser does not support the video tag.
