@@ -30,7 +30,6 @@ export default function Herobanner() {
               behavior: "smooth",
               block: "start",
             });
-            setOpen(false);
           }}
           className="px-2 py-1 text-left cursor-pointer"
         >
