@@ -1,23 +1,50 @@
+import { motion } from "framer-motion";
+
 import bg1 from "../../assets/bgpink.webp";
-import bg1Mobile from "../../assets/ping.png";
+import imgTrePers from "../../assets/trepers.png";
+import bgSky from "../../assets/bgbg.png";
 
 export default function SecOne() {
   return (
     <>
-      {/* MOBILE - eget bilde*/}
+      {/* MOBILE */}
       <section
-        className="min-h-screen flex flex-col bg-fixed bg-bottom bg-fill sm:hidden"
-        style={{ backgroundImage: `url(${bg1Mobile})` }}
-      />
+        className="sm:hidden relative h-60 bg-cover bg-bottom overflow-hidden"
+        style={{ backgroundImage: `url(${bgSky})` }}
+      >
+        {/* PERSONENE */}
+        <motion.img
+          src={imgTrePers}
+          alt=""
+          className="
+            absolute
+            bottom-0
+            left-0
+            w-full
+            h-auto
+            z-10
+          "
+          initial={{ y: 250 }}
+          whileInView={{ y: 0 }}
+          transition={{
+            duration: 1.8,
+            ease: "easeOut",
+          }}
+          viewport={{
+            once: true,
+            margin: "0px 0px -100px 0px",
+          }}
+        />
+      </section>
 
-      {/* SM OG OPPOVER eget bilde */}
+      {/* SM OG OPPOVER */}
       <section
         className="hidden sm:block min-h-screen bg-fixed bg-cover bg-bottom"
         style={{ backgroundImage: `url(${bg1})` }}
       />
 
-      <div className="flex justify-center items-center px-4 pb-4 pt-4 md:pt-20 bg-[#EDCBBC] ">
-        {/* style={{ backgroundImage: `url(${bg1})` }} */}
+      {/* TEKSTBOKS */}
+      <div className="relative z-20 flex justify-center items-center px-4 pb-4 pt-4 md:pt-20 bg-[#EDCBBC]">
         <p className="text-[#483F52] text-center max-w-5xl text-2xl sm:text-4xl p-4 md:pb-20">
           I Brytningstid møter vi 16 år gamle Billie, Angelo og Erik som står
           midt i overgangen mellom barn og voksen. Filmen undersøker hvordan de
@@ -30,6 +57,43 @@ export default function SecOne() {
     </>
   );
 }
+
+// import bg1 from "../../assets/bgpink.webp";
+// import bg1Mobile from "../../assets/ping.png";
+// import imgTrePers from "../../assets/trepers.png";
+
+// export default function SecOne() {
+//   return (
+//     <>
+//       {/* MOBILE - eget bilde*/}
+//       <section className="sm:hidden bg-bottom object-bottom">
+//         <img
+//           src={imgTrePers}
+//           alt=""
+//           className="absolute object-bottom w-full h-auto "
+//         />
+//       </section>
+
+//       {/* SM OG OPPOVER eget bilde */}
+//       <section
+//         className=" min-h-screen bg-fixed bg-cover bg-bottom"
+//         style={{ backgroundImage: `url(${bg1})` }}
+//       />
+
+//       <div className="flex justify-center items-center px-4 pb-4 pt-4 md:pt-20 bg-[#EDCBBC] ">
+//         {/* style={{ backgroundImage: `url(${bg1})` }} */}
+//         <p className="text-[#483F52] text-center max-w-5xl text-2xl sm:text-4xl p-4 md:pb-20">
+//           I Brytningstid møter vi 16 år gamle Billie, Angelo og Erik som står
+//           midt i overgangen mellom barn og voksen. Filmen undersøker hvordan de
+//           forstår seg selv gjennom de små øyeblikkene der livet skjer før man
+//           helt klarer å sette ord på det. Brytningtid er et portrett av det å
+//           være ung - en film om nærhet, vennskap og alt det som gjør
+//           ungdomstiden både intens og tidløs.
+//         </p>
+//       </div>
+//     </>
+//   );
+// }
 
 {
   /* <section
