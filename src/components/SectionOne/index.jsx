@@ -1,12 +1,20 @@
-import bg1 from "../../assets/pinkbg.webp";
+import bg1 from "../../assets/bgpink.webp";
+import bg1Mobile from "../../assets/ping.png";
 
 export default function SecOne() {
   return (
     <>
+      {/* MOBILE - eget bilde*/}
       <section
-        className="min-h-screen flex flex-col bg-fixed bg-bottom bg-cover"
+        className="min-h-screen flex flex-col bg-fixed bg-bottom bg-fill sm:hidden"
+        style={{ backgroundImage: `url(${bg1Mobile})` }}
+      />
+
+      {/* SM OG OPPOVER eget bilde */}
+      <section
+        className="hidden sm:block min-h-screen bg-fixed bg-cover bg-bottom"
         style={{ backgroundImage: `url(${bg1})` }}
-      ></section>
+      />
 
       <div className="flex justify-center items-center px-4 pb-4 pt-4 md:pt-20 bg-[#EDCBBC] ">
         {/* style={{ backgroundImage: `url(${bg1})` }} */}
