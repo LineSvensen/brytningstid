@@ -8,12 +8,58 @@ export default function SecOne() {
   return (
     <>
       {/* MOBILE */}
-      <section
+      <motion.section
         className="sm:hidden relative h-60 bg-cover bg-bottom overflow-hidden"
         style={{ backgroundImage: `url(${bgSky})` }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{
+          once: true,
+          amount: 0.6,
+        }}
       >
-        {/* PERSONENE */}
-        <motion.img
+        <motion.div
+          className="absolute inset-0 z-10"
+          variants={{
+            hidden: {
+              opacity: 0,
+              filter: "blur(10px)",
+              WebkitFilter: "blur(10px)",
+            },
+            visible: {
+              opacity: 1,
+              filter: "blur(0px)",
+              WebkitFilter: "blur(0px)",
+            },
+          }}
+          transition={{
+            duration: 1.5,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          <motion.img
+            src={imgTrePers}
+            alt=""
+            className="absolute bottom-0 left-0 w-full h-auto"
+            variants={{
+              hidden: {
+                y: 100,
+                scale: 1.08,
+              },
+              visible: {
+                y: 0,
+                scale: 1,
+              },
+            }}
+            transition={{
+              duration: 1.5,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+          />
+        </motion.div>
+      </motion.section>
+
+      {/* <motion.img
           src={imgTrePers}
           alt=""
           className="
@@ -34,8 +80,7 @@ export default function SecOne() {
             once: true,
             margin: "0px 0px -100px 0px",
           }}
-        />
-      </section>
+        /> */}
 
       {/* SM OG OPPOVER */}
       <section
@@ -45,7 +90,7 @@ export default function SecOne() {
 
       {/* TEKSTBOKS */}
       <div className="relative z-20 flex justify-center items-center px-4 pb-4 pt-4 md:pt-20 bg-[#EDCBBC]">
-        <p className="text-[#483F52] text-center max-w-5xl text-2xl sm:text-4xl p-4 md:pb-20">
+        <p className="text-[#483F52] text-center max-w-5xl text-base sm:text-lg p-4 md:pb-20">
           I Brytningstid møter vi 16 år gamle Billie, Angelo og Erik som står
           midt i overgangen mellom barn og voksen. Filmen undersøker hvordan de
           forstår seg selv gjennom de små øyeblikkene der livet skjer før man
