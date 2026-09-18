@@ -90,7 +90,7 @@ export default function SecOne() {
 
       {/* TEKSTBOKS */}
       <div className="relative z-20 flex justify-center items-center px-4 pb-4 pt-4 md:pt-20 bg-[#EDCBBC]">
-        <p className="text-[#483F52] text-center max-w-5xl text-2xl sm:text-4xl p-4 md:pb-20">
+        <p className="text-[#483F52] text-center max-w-5xl text-base sm:text-lg p-4 md:pb-20">
           I Brytningstid møter vi 16 år gamle Billie, Angelo og Erik som står
           midt i overgangen mellom barn og voksen. Filmen undersøker hvordan de
           forstår seg selv gjennom de små øyeblikkene der livet skjer før man
