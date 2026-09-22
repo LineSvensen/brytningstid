@@ -3,84 +3,51 @@ import { motion } from "framer-motion";
 import bg1 from "../../assets/bgpink.webp";
 import imgTrePers from "../../assets/trepers.png";
 import bgSky from "../../assets/bgbg.png";
+import bgPapir from "../../assets/pap.png";
+import bgPapMob from "../../assets/pap-mob.png";
 
 export default function SecOne() {
   return (
-    <>
+    <div className="relative">
       {/* MOBILE */}
       <motion.section
-        className="sm:hidden relative h-60 bg-cover bg-bottom overflow-hidden"
+        className="sm:hidden relative h-110 bg-cover bg-bottom overflow-hidden"
         style={{ backgroundImage: `url(${bgSky})` }}
         initial="hidden"
         whileInView="visible"
         viewport={{
           once: true,
-          amount: 0.6,
+          amount: 0.8,
         }}
       >
-        <motion.div
-          className="absolute inset-0 z-10"
-          variants={{
-            hidden: {
-              opacity: 0,
-              filter: "blur(10px)",
-              WebkitFilter: "blur(10px)",
-            },
-            visible: {
-              opacity: 1,
-              filter: "blur(0px)",
-              WebkitFilter: "blur(0px)",
-            },
-          }}
-          transition={{
-            duration: 1.5,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        >
-          <motion.img
-            src={imgTrePers}
-            alt=""
-            className="absolute bottom-0 left-0 w-full h-auto"
-            variants={{
-              hidden: {
-                y: 100,
-                scale: 1.08,
-              },
-              visible: {
-                y: 0,
-                scale: 1,
-              },
-            }}
-            transition={{
-              duration: 1.5,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-          />
-        </motion.div>
-      </motion.section>
-
-      {/* <motion.img
+        <motion.img
           src={imgTrePers}
           alt=""
           className="
-            absolute
-            bottom-0
-            left-0
-            w-full
-            h-auto
-            z-10
-          "
-          initial={{ y: 250 }}
-          whileInView={{ y: 0 }}
+      absolute
+      bottom-0
+      left-1/2
+      -translate-x-1/2
+      w-[180%]
+      max-w-none
+      h-auto
+    "
+          variants={{
+            hidden: {
+              y: 180,
+              opacity: 0,
+            },
+            visible: {
+              y: 0,
+              opacity: 1,
+            },
+          }}
           transition={{
-            duration: 1.8,
-            ease: "easeOut",
+            duration: 2.5,
+            ease: [0.22, 1, 0.36, 1],
           }}
-          viewport={{
-            once: true,
-            margin: "0px 0px -100px 0px",
-          }}
-        /> */}
+        />
+      </motion.section>
 
       {/* SM OG OPPOVER */}
       <section
@@ -88,9 +55,79 @@ export default function SecOne() {
         style={{ backgroundImage: `url(${bg1})` }}
       />
 
-      {/* TEKSTBOKS */}
-      <div className="relative z-20 flex justify-center items-center px-4 pb-4 pt-4 md:pt-20 bg-[#EDCBBC]">
-        <p className="text-[#483F52] text-center max-w-5xl text-base sm:text-lg p-4 md:pb-20">
+      {/* FLYTENDE PAPIR */}
+      <div
+        className="
+          absolute
+          z-30
+          left-1/2
+          bottom-0
+          -translate-x-1/2
+          translate-y-1/2
+
+          w-[99%]
+          h-[300px]
+
+          sm:w-[98%]
+          sm:h-100
+
+          max-w-full
+          flex
+          justify-center
+          items-center
+        "
+      >
+        {/* PAPIR - MOBILE */}
+        <img
+          src={bgPapMob}
+          alt=""
+          className="
+            absolute
+            inset-0
+            w-full
+            h-75
+            object-fill
+            z-0
+            sm:hidden
+          "
+        />
+
+        {/* PAPIR - SM OG OPPOVER */}
+        <img
+          src={bgPapir}
+          alt=""
+          className="
+            absolute
+            inset-0
+            w-full
+            h-full
+            object-fill
+            z-0
+            hidden
+            sm:block
+          "
+        />
+
+        {/* TEKST */}
+        <p
+          className="
+            relative
+            z-10
+            text-[#0F294F]
+            text-center
+            max-w-5xl
+
+            text-[15px]
+            leading-6
+            px-12
+
+            sm:text-lg
+            sm:leading-normal
+            sm:px-6
+
+            md:px-10
+          "
+        >
           I Brytningstid møter vi 16 år gamle Billie, Angelo og Erik som står
           midt i overgangen mellom barn og voksen. Filmen undersøker hvordan de
           forstår seg selv gjennom de små øyeblikkene der livet skjer før man
@@ -99,7 +136,7 @@ export default function SecOne() {
           ungdomstiden både intens og tidløs.
         </p>
       </div>
-    </>
+    </div>
   );
 }
 

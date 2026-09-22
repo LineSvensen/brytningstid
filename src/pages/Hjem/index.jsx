@@ -29,16 +29,12 @@ export default function Home() {
     <div className="">
       {/* Hero ligger helt normalt øverst */}
       <Herobanner />
-      <div className="relative z-10">
+      <div className="relative z-30">
         <SecOne />
-        <div className="absolute bottom-0 left-0 z-20 w-full h-96   pointer-events-none" />
       </div>
 
-      <div className="relative z-20   ">
+      <div className="relative z-20">
         <SecTwo />
-        
-        {/*For skygge:  bg-gradient-to-t from-transparent to-black pointer-events-none */}
-       
       </div>
 
       <div className="relative z-30  ">
