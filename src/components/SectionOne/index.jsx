@@ -111,21 +111,22 @@ export default function SecOne() {
         {/* TEKST */}
         <p
           className="
-            relative
+            relative sedgwick-ave-display-regular
             z-10
             text-[#0F294F]
             text-center
-            max-w-5xl
+             
 
-            text-[15px]
+            text-lg
             leading-6
             px-12
 
-            sm:text-lg
+            sm:text-3xl
             sm:leading-normal
             sm:px-6
 
-            md:px-10
+            md:px-12
+            
           "
         >
           I Brytningstid møter vi 16 år gamle Billie, Angelo og Erik som står
