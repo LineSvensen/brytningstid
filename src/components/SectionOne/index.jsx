@@ -117,7 +117,7 @@ export default function SecOne() {
             text-center
              
 
-            text-lg
+            text-base
             leading-6
             px-12
 
