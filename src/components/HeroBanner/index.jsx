@@ -20,7 +20,7 @@ export default function Herobanner() {
       <div className="absolute inset-0 " />
 
       <div className="relative z-10 py-110 px-6  sm:p-16 text-yellow-400">
-        <h1 className="text-5xl pb-2 sm:pb-0 sm:text-6xl lg:text-8xl  font-bold font-['Times_New_Roman']">
+        <h1 className="text-4xl pb-2 sm:pb-0 sm:text-6xl lg:text-8xl  font-bold font-['Times_New_Roman']">
           BRYTNINGSTID
         </h1>
 
