@@ -32,18 +32,22 @@ export default function HeaderNav() {
           });
           setOpen(false);
         }}
-        className="px-2 py-1 text-left cursor-pointer"
+        className="px-2 py-1 text-left nav-links-style"
       >
         Se Trailer
       </button>
 
-      <NavLink to="/om" className="px-2 py-1" onClick={() => setOpen(false)}>
+      <NavLink
+        to="/om"
+        className="px-2 py-1 nav-links-style"
+        onClick={() => setOpen(false)}
+      >
         Om Jakob Hardeberg
       </NavLink>
 
       <NavLink
         to="/prosjekter"
-        className="px-2 py-1"
+        className="px-2 py-1 nav-links-style"
         onClick={() => setOpen(false)}
       >
         Andre prosjekter

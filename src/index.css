@@ -4,8 +4,24 @@
   --color-white: #ffffff;
 } */
 
+:root {
+  --space-blue: #0f294f;
+  --moon-blue: #1c4c93;
+  --sky-blue: #1060a3;
+  --sea-blue: #78b1d9;
+  --teal: #2883a2;
+
+  --sunset-yellow: #ffb300;
+  --sunset-orange: #f7731b;
+  --dust-brown: #816038;
+  --coco-brown: #693f24;
+  --red-brown: #622e1f;
+
+  --night-black: #2d2d2d;
+}
+
 html {
-  background-color: black;
+  background-color: rgb(26, 26, 26);
 }
 
 body {
@@ -28,6 +44,22 @@ body {
   font-family: "Sedgwick Ave Display", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.nav-links-style {
+  font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: var(--sea-blue);
+}
+
+.sea {
+  color: var(--sea-blue);
+}
+
+.sunset {
+  color: var(--sunset-yellow);
 }
 
 /* #root {
