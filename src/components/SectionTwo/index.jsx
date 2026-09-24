@@ -105,24 +105,15 @@ export default function SecTwo() {
             
           "
           /> */}
-          <img
-            src={stuff}
-            alt=""
-            className="
-             
-            inset-0
-            w-100
-            h-100
-            object-fill
-            z-0
-            
-          "
-          />
         </div>
+
+        
 
         {/* Fade til svart */}
         <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-b from-transparent to-black pointer-events-none" />
       </section>
+
+      
 
       <section
         id="trailer"
@@ -143,6 +134,7 @@ export default function SecTwo() {
           </div>
         </div>
       </section>
+      
     </>
   );
 }
