@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import bg1 from "../../assets/bgpink.webp";
 import imgTrePers from "../../assets/photos.png";
+import imgTrePersTo from "../../assets/kopi-bg.jpg";
 import bgSky from "../../assets/bgbg.png";
 import bgPapir from "../../assets/pap.png";
 import bgPapMob from "../../assets/pap-mob.png";
@@ -52,8 +53,8 @@ export default function SecOne() {
 
       {/* SM OG OPPOVER */}
       <section
-        className="hidden sm:block min-h-screen bg-fixed bg-cover bg-bottom"
-        style={{ backgroundImage: `url(${bg1})` }}
+        className="hidden sm:block min-h-screen bg-fixed bg-cover  bg-bottom  "
+        style={{ backgroundImage: `url(${imgTrePersTo})` }}
       />
 
       {/* FLYTENDE PAPIR */}
@@ -112,7 +113,7 @@ export default function SecOne() {
         {/* TEKST */}
         <p
           className="
-            relative sedgwick-ave-display-regular
+            relative sedgwick-ave-display-regular 
             z-10
             text-[#0F294F]
             text-center
@@ -122,7 +123,7 @@ export default function SecOne() {
             leading-6
             px-12
 
-            sm:text-3xl
+            sm:text-2xl
             sm:leading-normal
             sm:px-6
 
@@ -137,7 +138,6 @@ export default function SecOne() {
           være ung - en film om nærhet, vennskap og alt det som gjør
           ungdomstiden både intens og tidløs.
         </p>
-        
       </div>
     </div>
   );

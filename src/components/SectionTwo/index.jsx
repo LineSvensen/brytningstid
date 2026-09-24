@@ -108,7 +108,7 @@ export default function SecTwo() {
           <img
             src={stuff}
             alt=""
-            className="
+            className=" hidden
              
             inset-0
             w-100

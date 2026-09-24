@@ -5,9 +5,9 @@ import pizza from "../../assets/pizza.png";
 
 export default function Herobanner() {
   return (
-    <section className="relative min-h-screen overflow-hidden flex items-end justify-start ">
+    <section className="relative h-[720px] sm:min-h-screen  overflow-hidden flex items-end justify-start  ">
       <video
-        className="absolute inset-0 h-full w-full object-cover  "
+        className="absolute inset-0 h-full w-full object-cover   "
         autoPlay
         muted
         loop
@@ -22,7 +22,7 @@ export default function Herobanner() {
 
       {/* <div className="absolute inset-0 " /> */}
 
-      <div className="relative z-10 py-110 px-6  sm:p-16 ">
+      <div className="relative z-10  py-40 px-6  sm:p-16 ">
         <h1 className="text-4xl min-[400px]:text-5xl pb-2 sunset sm:pb-0 sm:text-6xl lg:text-8xl  font-bold font-['Times_New_Roman']">
           BRYTNINGSTID
         </h1>
