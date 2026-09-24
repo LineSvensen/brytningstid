@@ -1,17 +1,18 @@
 import { motion } from "framer-motion";
 
 import bg1 from "../../assets/bgpink.webp";
-import imgTrePers from "../../assets/trepers.png";
+import imgTrePers from "../../assets/photos.png";
 import bgSky from "../../assets/bgbg.png";
 import bgPapir from "../../assets/pap.png";
 import bgPapMob from "../../assets/pap-mob.png";
+import imgStuff from "../../assets/stuff.png";
 
 export default function SecOne() {
   return (
     <div className="relative">
       {/* MOBILE */}
       <motion.section
-        className="sm:hidden relative h-110 bg-cover bg-bottom overflow-hidden"
+        className="sm:hidden relative h-130 bg-cover bg-bottom overflow-hidden"
         style={{ backgroundImage: `url(${bgSky})` }}
         initial="hidden"
         whileInView="visible"
@@ -25,10 +26,10 @@ export default function SecOne() {
           alt=""
           className="
       absolute
-      bottom-0
+      bottom-20
       left-1/2
       -translate-x-1/2
-      w-[180%]
+      w-[110%]
       max-w-none
       h-auto
     "
@@ -136,6 +137,7 @@ export default function SecOne() {
           være ung - en film om nærhet, vennskap og alt det som gjør
           ungdomstiden både intens og tidløs.
         </p>
+        
       </div>
     </div>
   );
