@@ -6,7 +6,14 @@ import imgTrePersTo from "../../assets/kopi-bg.jpg";
 import bgSky from "../../assets/bgbg.png";
 import bgPapir from "../../assets/pap.png";
 import bgPapMob from "../../assets/pap-mob.png";
-import imgStuff from "../../assets/stuff.png";
+import stuff from "../../assets/stuff.png";
+import chain from "../../assets/chain.png";
+import sharpie from "../../assets/sharpie.png";
+import blackHeart from "../../assets/blackheart.png";
+import yellowHeart from "../../assets/yellowheart.png";
+import pinkLighter from "../../assets/lighterpink.png";
+import chips from "../../assets/chips.png";
+import spar from "../../assets/spar.png";
 
 export default function SecOne() {
   return (
@@ -110,6 +117,20 @@ export default function SecOne() {
           "
         />
 
+        <img
+          src={pinkLighter}
+          alt=""
+          className=" hidden sm:block
+             
+            inset-0
+            w-80
+            h-80
+            object-fill
+            z-0
+            
+          "
+        />
+
         {/* TEKST */}
         <p
           className="
@@ -138,6 +159,20 @@ export default function SecOne() {
           være ung - en film om nærhet, vennskap og alt det som gjør
           ungdomstiden både intens og tidløs.
         </p>
+        <img
+          src={chips}
+          alt=""
+          className=" hidden sm:block
+             
+            inset-0
+            w-90
+            h-90
+            rotate-90
+            object-fill
+            z-0
+            
+          "
+        />
       </div>
     </div>
   );
