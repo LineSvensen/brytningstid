@@ -27,7 +27,7 @@ export default function SecThree() {
         <h2 className="text-white  text-5xl font-bold"></h2>
       </section>
 
-      <section className="min-h-screen  bg-olive-200 text-black flex flex-col items-center justify-center">
+      <section className=" pt-8 lg:pt-0  bg-olive-200 text-black flex flex-col items-center justify-center">
         <DirSec />
       </section>
       <section className="">
