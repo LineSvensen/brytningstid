@@ -54,7 +54,7 @@ export default function Herobanner() {
           "
           />
           {/* <FaPlay className="text-3xl lg:text-4xl" /> */}
-          <h2 className="text-2xl lg:text-3xl sea flex flex-row gap-4 items-center lacquer-regular  ">
+          <h2 className="text-2xl lg:text-3xl flex flex-row gap-4 items-center play-button ">
             Play
           </h2>
         </button>

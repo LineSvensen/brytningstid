@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 import bg1 from "../../assets/bgpink.webp";
 import imgTrePers from "../../assets/photos.png";
 import imgTrePersTo from "../../assets/kopi-bg.jpg";
@@ -18,9 +17,9 @@ import spar from "../../assets/spar.png";
 export default function SecOne() {
   return (
     <div className="relative">
-      {/* MOBILE */}
+      {/* MOBILE + TABLET (UNDER LG) */}
       <motion.section
-        className="sm:hidden relative h-130 bg-cover bg-bottom overflow-hidden"
+        className="relative h-130 overflow-hidden bg-cover bg-bottom lg:hidden"
         style={{ backgroundImage: `url(${bgSky})` }}
         initial="hidden"
         whileInView="visible"
@@ -33,14 +32,14 @@ export default function SecOne() {
           src={imgTrePers}
           alt=""
           className="
-      absolute
-      bottom-20
-      left-1/2
-      -translate-x-1/2
-      w-[110%]
-      max-w-none
-      h-auto
-    "
+            absolute
+            bottom-20
+            left-1/2
+            -translate-x-1/2
+            w-[110%]
+            max-w-none
+            h-auto
+          "
           variants={{
             hidden: {
               y: 180,
@@ -58,9 +57,9 @@ export default function SecOne() {
         />
       </motion.section>
 
-      {/* SM OG OPPOVER */}
+      {/* DESKTOP (LG OG OPPOVER) */}
       <section
-        className="hidden sm:block min-h-screen bg-fixed bg-cover  bg-bottom  "
+        className="hidden min-h-screen bg-fixed bg-cover bg-bottom lg:block"
         style={{ backgroundImage: `url(${imgTrePersTo})` }}
       />
 
@@ -68,88 +67,106 @@ export default function SecOne() {
       <div
         className="
           absolute
-          z-30
-          left-1/2
           bottom-0
+          left-1/2
+          z-30
+          flex
           -translate-x-1/2
           translate-y-1/2
+          items-center
+          justify-center
 
           w-[99%]
           h-[300px]
 
-          sm:w-[98%]
-          sm:h-100
+          sm:w-[95%]
+          sm:h-[350px]
+
+          md:w-[90%]
+          md:h-[400px]
+
+          lg:w-[98%]
+          lg:h-100
 
           max-w-full
-          flex
-          justify-center
-          items-center
         "
       >
-        {/* PAPIR - MOBILE */}
+        {/* PAPIR - MOBILE + TABLET */}
         <img
           src={bgPapMob}
           alt=""
           className="
             absolute
             inset-0
-            w-full
-            h-75
-            object-fill
             z-0
-            sm:hidden
+            h-full
+            w-full
+            
+            object-fill
+            lg:hidden
           "
         />
 
-        {/* PAPIR - SM OG OPPOVER */}
+        {/* PAPIR - DESKTOP */}
         <img
           src={bgPapir}
           alt=""
           className="
             absolute
             inset-0
-            w-full
-            h-full
-            object-fill
             z-0
             hidden
-            sm:block
+            h-full
+            w-full
+            object-fill
+            lg:block
           "
         />
 
+        {/* LIGHTER - DESKTOP */}
         <img
           src={pinkLighter}
           alt=""
-          className=" hidden sm:block
-             
-            inset-0
-            w-80
-            h-80
-            object-fill
+          className="
             z-0
-            
+            hidden
+            h-80
+            w-80
+            lg:h-60
+            lg:w-60
+            xl:h-80
+            xl:w-80
+            shrink-0
+            object-fill
+            lg:block
           "
         />
 
         {/* TEKST */}
         <p
           className="
-            relative sedgwick-ave-display-regular 
+            relative
             z-10
-            text-[#0F294F]
+            sedgwick-ave-display-regular
             text-center
-             
+            text-[#0F294F]
 
+            px-12
             text-base
             leading-6
-            px-12
 
-            sm:text-2xl
-            sm:leading-normal
-            sm:px-6
+            sm:px-16
+            sm:text-xl
+            sm:leading-7
 
-            md:px-12
-            
+            md:px-20
+            md:text-2xl
+            md:leading-normal
+
+            lg:px-6
+            lg:text-xl
+
+            xl:px-12
           "
         >
           I Brytningstid møter vi 16 år gamle Billie, Angelo og Erik som står
@@ -159,18 +176,25 @@ export default function SecOne() {
           være ung - en film om nærhet, vennskap og alt det som gjør
           ungdomstiden både intens og tidløs.
         </p>
+
+        {/* CHIPS - DESKTOP */}
         <img
           src={chips}
           alt=""
-          className=" hidden sm:block
-             
-            inset-0
-            w-90
+          className="
+            z-0
+            hidden
             h-90
+            w-90
+            
+            lg:h-60
+            lg:w-60
+            xl:h-90
+            xl:w-90
+            shrink-0
             rotate-90
             object-fill
-            z-0
-            
+            lg:block
           "
         />
       </div>

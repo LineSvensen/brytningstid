@@ -47,11 +47,29 @@ body {
 }
 
 .nav-links-style {
-  font-family: "Lacquer", system-ui;
-  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
   font-style: normal;
   font-size: 18px;
   color: var(--sea-blue);
+}
+
+.nav-links-style:hover {
+  color: white;
+  transition: 0.5s;
+}
+
+.play-button {
+  font-family: "Sedgwick Ave Display", cursive;
+  text-transform: uppercase;
+  font-style: none;
+  letter-spacing: -1px;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 52px;
+  color: white;
 }
 
 .sea {
