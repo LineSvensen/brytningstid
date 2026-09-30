@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import koderaImg from "../../assets/kodera-logo-hvit.svg";
+import koderaImg from "../../assets/Kodera-logo-hvit.svg";
 
 export default function Footer() {
   return (
@@ -8,7 +8,10 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
-            <Link to="/" className="text-2xl font-bold uppercase text-sunset-yellow">
+            <Link
+              to="/"
+              className="text-2xl font-bold uppercase text-sunset-yellow"
+            >
               Brytningstid
             </Link>
 
@@ -19,9 +22,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h2 className="footer-headings">
-              Navigasjon
-            </h2>
+            <h2 className="footer-headings">Navigasjon</h2>
 
             <nav className="mt-4 flex flex-col gap-3">
               <a href="#trailer" className=" footer-links-style">
