@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
-            <Link to="/" className="text-xl font-bold uppercase">
+            <Link to="/" className="text-2xl font-bold uppercase text-sunset-yellow">
               Brytningstid
             </Link>
 
@@ -19,18 +19,16 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h2 className="font-semibold uppercase tracking-wide">
+            <h2 className="footer-headings">
               Navigasjon
             </h2>
 
             <nav className="mt-4 flex flex-col gap-3">
-             
-
-              <a href="#trailer" className="hover:underline">
+              <a href="#trailer" className=" footer-links-style">
                 Se trailer
               </a>
 
-              <a href="#regissor" className="hover:underline">
+              <a href="#regissor" className=" footer-links-style">
                 Regissøren
               </a>
             </nav>
@@ -38,17 +36,17 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h2 className="font-semibold uppercase tracking-wide">Kontakt</h2>
+            <h2 className="footer-headings">Kontakt</h2>
 
             <div className="mt-4 flex flex-col gap-3">
               <a
                 href="mailto:jakobsvensen700@gmail.com"
-                className="hover:underline"
+                className="footer-links-style"
               >
                 jakobsvensen700@gmail.com
               </a>
 
-              <a href="tel:+4746540448" className="hover:underline">
+              <a href="tel:+4746540448" className="footer-links-style">
                 +47 465 40 448
               </a>
             </div>

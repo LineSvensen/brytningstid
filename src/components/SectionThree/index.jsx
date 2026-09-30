@@ -11,6 +11,7 @@ export default function SecThree() {
         className="min-h-[100dvh]  bg-fixed bg-bottom bg-cover flex items-center justify-center"
         style={{ backgroundImage: `url(${bg3})` }}
       >
+        
         <img
           src={stuff}
           alt=""

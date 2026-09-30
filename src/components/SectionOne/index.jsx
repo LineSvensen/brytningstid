@@ -17,46 +17,6 @@ import spar from "../../assets/spar.png";
 export default function SecOne() {
   return (
     <div className="relative">
-      {/* MOBILE + TABLET (UNDER LG) */}
-      <motion.section
-        className="relative h-130 overflow-hidden bg-cover bg-bottom lg:hidden"
-        style={{ backgroundImage: `url(${bgSky})` }}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{
-          once: true,
-          amount: 0.8,
-        }}
-      >
-        <motion.img
-          src={imgTrePers}
-          alt=""
-          className="
-            absolute
-            bottom-20
-            left-1/2
-            -translate-x-1/2
-            w-[110%]
-            max-w-none
-            h-auto
-          "
-          variants={{
-            hidden: {
-              y: 180,
-              opacity: 0,
-            },
-            visible: {
-              y: 0,
-              opacity: 1,
-            },
-          }}
-          transition={{
-            duration: 2.5,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        />
-      </motion.section>
-
       {/* DESKTOP (LG OG OPPOVER) */}
       <section
         className="hidden min-h-screen bg-fixed bg-cover bg-bottom lg:block"
@@ -91,8 +51,8 @@ export default function SecOne() {
           max-w-full
         "
       >
-        {/* PAPIR - MOBILE + TABLET */}
-        <img
+        {/* PAPIR - MOBILE + TABLET ---------------------------------------*/}
+        {/* <img
           src={bgPapMob}
           alt=""
           className="
@@ -105,7 +65,7 @@ export default function SecOne() {
             object-fill
             lg:hidden
           "
-        />
+        /> */}
 
         {/* PAPIR - DESKTOP */}
         <img
@@ -147,26 +107,30 @@ export default function SecOne() {
           className="
             relative
             z-10
-            sedgwick-ave-display-regular
+            text-paper
             text-center
-            text-[#0F294F]
+           
 
-            px-12
+            px-8
             text-base
             leading-6
 
+            hidden
+
+            lg:block
+
             sm:px-16
-            sm:text-xl
+            sm:text-lg
             sm:leading-7
 
             md:px-20
-            md:text-2xl
+            md:text-xl
             md:leading-normal
 
-            lg:px-6
-            lg:text-xl
+            lg:px-0
+            lg:text-lg
 
-            xl:px-12
+            xl:px-0
           "
         >
           I Brytningstid møter vi 16 år gamle Billie, Angelo og Erik som står
