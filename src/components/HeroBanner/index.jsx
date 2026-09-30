@@ -23,7 +23,7 @@ export default function Herobanner() {
       {/* <div className="absolute inset-0 " /> */}
 
       <div className="relative z-10  py-40 px-6  sm:p-16 ">
-        <h1 className="text-4xl min-[400px]:text-5xl pb-2 sunset sm:pb-0 sm:text-6xl lg:text-8xl  font-bold font-['Times_New_Roman']">
+        <h1 className="text-4xl min-[400px]:text-5xl pb-2 text-sunset-yellow sm:pb-0 sm:text-6xl lg:text-8xl  font-bold font-['Times_New_Roman']">
           BRYTNINGSTID
         </h1>
 
@@ -50,11 +50,16 @@ export default function Herobanner() {
             lg:h-25
             object-fill
             z-0
+             transition-transform duration-300
+  hover:scale-110 
            
           "
           />
           {/* <FaPlay className="text-3xl lg:text-4xl" /> */}
-          <h2 className="text-2xl lg:text-3xl sea flex flex-row gap-4 items-center lacquer-regular  ">
+          <h2
+            className="text-4xl lg:text-6xl flex flex-row gap-4 items-center play-button transition-transform duration-300
+  hover:scale-110 "
+          >
             Play
           </h2>
         </button>

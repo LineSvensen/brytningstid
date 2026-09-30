@@ -11,8 +11,11 @@ export function SponsSec() {
           Nordic Talents Pitch Award <b>Winner 2026</b>
         </p>
       </div>
-      <img src={dnfBilde} className="h-ull w-50 sm:w-70 pt-12 lg:pt-8 pb-4"></img>
-      <img src={imgLogo1} className="h-full w-30 sm:w-45 pt-12 lg:pt-8 pb-12"></img>
+      <img
+        src={dnfBilde}
+        className="h-ull w-50 sm:w-70 pt-12 lg:pt-8 pb-4"
+      ></img>
+      <img src={imgLogo1} className="h-full w-30 sm:w-45 pt-12   pb-12"></img>
     </div>
   );
 }

@@ -4,20 +4,20 @@
   --color-white: #ffffff;
 } */
 
-:root {
-  --space-blue: #0f294f;
-  --moon-blue: #1c4c93;
-  --sky-blue: #1060a3;
-  --sea-blue: #78b1d9;
-  --teal: #2883a2;
+@theme {
+  --color-space-blue: #0f294f;
+  --color-moon-blue: #1c4c93;
+  --color-sky-blue: #1060a3;
+  --color-sea-blue: #78b1d9;
+  --color-teal: #2883a2;
 
-  --sunset-yellow: #ffb300;
-  --sunset-orange: #f7731b;
-  --dust-brown: #816038;
-  --coco-brown: #693f24;
-  --red-brown: #622e1f;
+  --color-sunset-yellow: #ffb300;
+  --color-sunset-orange: #f7731b;
+  --color-dust-brown: #816038;
+  --color-coco-brown: #693f24;
+  --color-red-brown: #622e1f;
 
-  --night-black: #2d2d2d;
+  --color-night-black: #2d2d2d;
 }
 
 html {
@@ -27,6 +27,8 @@ html {
 body {
   background-color: black;
 }
+
+/* ----------Fonts--------------- */
 
 .lacquer-regular {
   font-family: "Lacquer", system-ui;
@@ -46,20 +48,104 @@ body {
   font-style: normal;
 }
 
-.nav-links-style {
-  font-family: "Lacquer", system-ui;
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
   font-weight: 400;
   font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.reenie-beanie-regular {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ------------------------- */
+
+.nav-links-style {
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-style: normal;
   font-size: 18px;
-  color: var(--sea-blue);
+  color: var(--color-sea-blue);
 }
 
-.sea {
-  color: var(--sea-blue);
+.nav-links-style:hover {
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-.sunset {
-  color: var(--sunset-yellow);
+.play-button {
+  font-family: "Reenie Beanie", cursive;
+  text-transform: uppercase;
+  font-style: none;
+  letter-spacing: -1px;
+  font-weight: 500;
+  font-style: normal;
+
+  color: white;
+  transition: 0.3s;
+}
+
+.text-paper {
+  color: var(--color-space-blue);
+  font-family: "Sedgwick Ave Display", cursive;
+  /* text-transform: uppercase; */
+  font-weight: 200;
+}
+
+.mobile-text {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  /* text-transform: uppercase; */
+  
+}
+
+.footer-headings {
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+}
+
+.footer-links-style {
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  color: white;
+}
+
+.footer-links-style:hover {
+  color: var(--color-sea-blue);
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 /* #root {
