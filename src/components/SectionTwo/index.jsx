@@ -1,4 +1,3 @@
-
 import ScrollReveal from "../ScrollReveal";
 import bg2 from "../../assets/bluebg.webp";
 import desktopTrailer from "../../assets/test-hero.webm";
@@ -24,8 +23,8 @@ export default function SecTwo() {
     <>
       <section
         className="
-    relative
-    min-h-[130dvh]
+    relative 
+    
     lg:min-h-[100dvh]
     bg-scroll
     lg:bg-fixed
@@ -79,7 +78,7 @@ export default function SecTwo() {
           />
         </motion.section> */}
 
-        <div className="relative z-10 w-full px-8 lg:hidden">
+        <div className="relative z-10 w-full px-8 pt-30 pb-30 lg:hidden">
           <ScrollReveal
             baseOpacity={0}
             enableBlur={true}
@@ -182,7 +181,7 @@ export default function SecTwo() {
         <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-b from-transparent to-black pointer-events-none" />
       </section>
 
-      <p className="text-white text-center">hey</p>
+      {/* <p className="text-white text-center">hey</p> */}
 
       <section
         id="trailer"
