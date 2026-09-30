@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import bg1 from "../../assets/bgpink.webp";
 import imgTrePers from "../../assets/photos.png";
 import imgTrePersTo from "../../assets/kopi-bg.jpg";
@@ -13,6 +12,8 @@ import yellowHeart from "../../assets/yellowheart.png";
 import pinkLighter from "../../assets/lighterpink.png";
 import chips from "../../assets/chips.png";
 import spar from "../../assets/spar.png";
+
+// import { motion } from "framer-motion";
 
 export default function SecOne() {
   return (

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+
 import ScrollReveal from "../ScrollReveal";
 import bg2 from "../../assets/bluebg.webp";
 import desktopTrailer from "../../assets/test-hero.webm";
@@ -16,6 +16,8 @@ import yellowHeart from "../../assets/yellowheart.png";
 import pinkLighter from "../../assets/lighterpink.png";
 import chips from "../../assets/chips.png";
 import spar from "../../assets/spar.png";
+
+// import { motion } from "framer-motion";
 
 export default function SecTwo() {
   return (
