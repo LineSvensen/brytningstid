@@ -1,4 +1,4 @@
-import imgOne from "../../assets/bryt-1.webp";
+import imgOne from "../../assets/posterdesktop.webp";
 import vidOne from "../../assets/PILOT3.mp4";
 import { FaPlay } from "react-icons/fa";
 import pizza from "../../assets/pizza.png";
