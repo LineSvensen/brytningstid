@@ -2,6 +2,8 @@ import imgOne from "../../assets/posterdesktop.webp";
 import vidOne from "../../assets/PILOT3.mp4";
 import { FaPlay } from "react-icons/fa";
 import pizza from "../../assets/pizza.png";
+import onePlay from "../../assets/1play.png";
+import twoPlay from "../../assets/2play.png";
 
 export default function Herobanner() {
   return (
@@ -36,32 +38,66 @@ export default function Herobanner() {
               block: "start",
             });
           }}
-          className="px-2 py-6   cursor-pointer text-center flex flex-row items-center justify-center gap-4"
+          className="px-2 py-6   cursor-pointer text-center flex flex-row items-center justify-center gap-8"
         >
-          <img
-            src={pizza}
-            alt="Spill av trailer"
-            className=" 
+          {/* --------------- tegne knapp */}
+
+          {/* <div className="group relative w-15 h-15 lg:w-25 lg:h-25 cursor-pointer"> */}
+          {/* Normal */}
+          {/* <img
+              src={onePlay}
+              alt="Spill av trailer"
+              className="
+              absolute inset-0
+              w-full h-full
+              object-fill
+              transition-opacity duration-200
+              group-hover:opacity-0
+    "
+            /> */}
+
+          {/* Hover */}
+          {/* <img
+              src={twoPlay}
+              alt=""
+              className="
+              absolute inset-0
+              w-full h-full
+              object-fill
+              opacity-0
+              transition-opacity duration-200
+              group-hover:opacity-100
+    "
+            /> */}
+          {/* </div> */}
+
+          <div className="flex  items-center gap-4  ">
+            {/* --------------- pizza knapp */}
+            <img
+              src={pizza}
+              alt="Spill av trailer"
+              className=" 
              
             inset-0
-            w-15
-            h-15
-            lg:w-25
-            lg:h-25
+            w-16
+            h-16
+            lg:w-24
+            lg:h-24
             object-fill
             z-0
              transition-transform duration-300
-  hover:scale-110 
+              hover:scale-120 
            
           "
-          />
-          {/* <FaPlay className="text-3xl lg:text-4xl" /> */}
-          <h2
-            className="text-4xl lg:text-6xl flex flex-row gap-4 items-center play-button transition-transform duration-300
-  hover:scale-110 "
-          >
-            Play
-          </h2>
+            />
+
+            {/* --------------- play tekst knapp */}
+
+            {/* <FaPlay className="text-3xl lg:text-4xl" /> */}
+            <h2 className="text-3xl lg:text-4xl text-center play-button">
+              PLAY
+            </h2>
+          </div>
         </button>
       </div>
     </section>

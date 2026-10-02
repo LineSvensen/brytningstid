@@ -103,7 +103,7 @@ export default function SecOne() {
           "
         />
 
-        {/* TEKST */}
+        {/* TEKST  - Mobilversjon ligger i SectionTwo */}
         <p
           className="
             relative
