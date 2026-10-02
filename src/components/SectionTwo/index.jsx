@@ -78,12 +78,21 @@ export default function SecTwo() {
           />
         </motion.section> */}
 
+        {/* ----gammel
+        <ScrollReveal
+          baseOpacity={0}
+          enableBlur={true}
+          baseRotation={10}
+          blurStrength={10}
+          containerClassName="mx-auto max-w-3xl"
+          textClassName="mobile-text text-center"
+        ></ScrollReveal>
+        ---- */}
+
         <div className="relative z-10 w-full max-w-60 px-8 pt-30 pb-50 lg:hidden">
           <ScrollReveal
-            baseOpacity={0}
             enableBlur={true}
-            baseRotation={10}
-            blurStrength={10}
+            blurStrength={5}
             containerClassName="mx-auto max-w-3xl"
             textClassName="mobile-text text-center"
           >
@@ -176,7 +185,6 @@ export default function SecTwo() {
           "
           /> */}
         </div>
-
         {/* Fade til svart */}
         <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-b from-transparent to-black pointer-events-none" />
       </section>

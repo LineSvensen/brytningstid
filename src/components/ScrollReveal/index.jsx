@@ -8,13 +8,9 @@ const ScrollReveal = ({
   children,
   scrollContainerRef,
   enableBlur = true,
-  baseOpacity = 0.1,
-  baseRotation = 3,
-  blurStrength = 4,
+  blurStrength = 6,
   containerClassName = "",
   textClassName = "",
-  rotationEnd = "center center",
-  wordAnimationEnd = "center center",
 }) => {
   const containerRef = useRef(null);
 
@@ -38,89 +34,46 @@ const ScrollReveal = ({
     if (!el) return;
 
     const scroller = scrollContainerRef?.current ?? window;
+    const wordElements = el.querySelectorAll(".word");
 
     const ctx = gsap.context(() => {
-      // Rotation
-      gsap.fromTo(
-        el,
-        {
-          transformOrigin: "0% 50%",
-          rotate: baseRotation,
-        },
-        {
-          ease: "none",
-          rotate: 0,
-          scrollTrigger: {
-            trigger: el,
-            scroller,
-            start: "top bottom",
-            end: rotationEnd,
-            scrub: true,
-          },
-        },
-      );
-
-      const wordElements = el.querySelectorAll(".word");
-
-      // Opacity
       gsap.fromTo(
         wordElements,
         {
-          opacity: baseOpacity,
-          willChange: "opacity",
+          opacity: 0.15,
+          y: 8,
+          filter: enableBlur ? `blur(${blurStrength}px)` : "blur(0px)",
         },
         {
-          ease: "none",
           opacity: 1,
-          stagger: 0.05,
+          y: 0,
+          filter: "blur(0px)",
+          ease: "none",
+          stagger: 0.08,
+
           scrollTrigger: {
             trigger: el,
             scroller,
-            start: "top 85%",
-            end: wordAnimationEnd,
-            scrub: true,
+            start: "top 80%",
+            end: "bottom 55%",
+            scrub: 1,
           },
         },
       );
-
-      // Blur
-      if (enableBlur) {
-        gsap.fromTo(
-          wordElements,
-          {
-            filter: `blur(${blurStrength}px)`,
-          },
-          {
-            ease: "none",
-            filter: "blur(0px)",
-            stagger: 0.05,
-            scrollTrigger: {
-              trigger: el,
-              scroller,
-              start: "top 85%",
-              end: wordAnimationEnd,
-              scrub: true,
-            },
-          },
-        );
-      }
     }, containerRef);
 
     return () => ctx.revert();
-  }, [
-    scrollContainerRef,
-    enableBlur,
-    baseRotation,
-    baseOpacity,
-    rotationEnd,
-    wordAnimationEnd,
-    blurStrength,
-  ]);
+  }, [scrollContainerRef, enableBlur, blurStrength]);
 
   return (
     <div ref={containerRef} className={`my-5 ${containerClassName}`}>
       <p
-        className={`text-[clamp(1.6rem,4vw,3rem)] leading-[1.5] font-semibold ${textClassName}`}
+        className={`
+          text-[clamp(1.6rem,4vw,3rem)]
+          leading-[1.5]
+          font-semibold
+          ${textClassName}
+        `}
       >
         {splitText}
       </p>
@@ -129,3 +82,135 @@ const ScrollReveal = ({
 };
 
 export default ScrollReveal;
+
+// import { useEffect, useRef, useMemo } from "react";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// const ScrollReveal = ({
+//   children,
+//   scrollContainerRef,
+//   enableBlur = true,
+//   baseOpacity = 0.1,
+//   baseRotation = 3,
+//   blurStrength = 4,
+//   containerClassName = "",
+//   textClassName = "",
+//   rotationEnd = "center center",
+//   wordAnimationEnd = "center center",
+// }) => {
+//   const containerRef = useRef(null);
+
+//   const splitText = useMemo(() => {
+//     const text = typeof children === "string" ? children : "";
+
+//     return text.split(/(\s+)/).map((word, index) => {
+//       if (word.match(/^\s+$/)) return word;
+
+//       return (
+//         <span className="word inline-block" key={index}>
+//           {word}
+//         </span>
+//       );
+//     });
+//   }, [children]);
+
+//   useEffect(() => {
+//     const el = containerRef.current;
+
+//     if (!el) return;
+
+//     const scroller = scrollContainerRef?.current ?? window;
+
+//     const ctx = gsap.context(() => {
+//       // Rotation
+//       gsap.fromTo(
+//         el,
+//         {
+//           transformOrigin: "0% 50%",
+//           rotate: baseRotation,
+//         },
+//         {
+//           ease: "none",
+//           rotate: 0,
+//           scrollTrigger: {
+//             trigger: el,
+//             scroller,
+//             start: "top bottom",
+//             end: rotationEnd,
+//             scrub: true,
+//           },
+//         },
+//       );
+
+//       const wordElements = el.querySelectorAll(".word");
+
+//       // Opacity
+//       gsap.fromTo(
+//         wordElements,
+//         {
+//           opacity: baseOpacity,
+//           willChange: "opacity",
+//         },
+//         {
+//           ease: "none",
+//           opacity: 1,
+//           stagger: 0.05,
+//           scrollTrigger: {
+//             trigger: el,
+//             scroller,
+//             start: "top 85%",
+//             end: wordAnimationEnd,
+//             scrub: true,
+//           },
+//         },
+//       );
+
+//       // Blur
+//       if (enableBlur) {
+//         gsap.fromTo(
+//           wordElements,
+//           {
+//             filter: `blur(${blurStrength}px)`,
+//           },
+//           {
+//             ease: "none",
+//             filter: "blur(0px)",
+//             stagger: 0.05,
+//             scrollTrigger: {
+//               trigger: el,
+//               scroller,
+//               start: "top 85%",
+//               end: wordAnimationEnd,
+//               scrub: true,
+//             },
+//           },
+//         );
+//       }
+//     }, containerRef);
+
+//     return () => ctx.revert();
+//   }, [
+//     scrollContainerRef,
+//     enableBlur,
+//     baseRotation,
+//     baseOpacity,
+//     rotationEnd,
+//     wordAnimationEnd,
+//     blurStrength,
+//   ]);
+
+//   return (
+//     <div ref={containerRef} className={`my-5 ${containerClassName}`}>
+//       <p
+//         className={`text-[clamp(1.6rem,4vw,3rem)] leading-[1.5] font-semibold ${textClassName}`}
+//       >
+//         {splitText}
+//       </p>
+//     </div>
+//   );
+// };
+
+// export default ScrollReveal;
