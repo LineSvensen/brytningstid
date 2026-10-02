@@ -78,7 +78,7 @@ export default function SecTwo() {
           />
         </motion.section> */}
 
-        <div className="relative z-10 w-full px-8 pt-30 pb-30 lg:hidden">
+        <div className="relative z-10 w-full max-w-60 px-8 pt-30 pb-50 lg:hidden">
           <ScrollReveal
             baseOpacity={0}
             enableBlur={true}
@@ -188,16 +188,17 @@ export default function SecTwo() {
         className="relative flex items-center justify-center bg-black px-4 py-4"
       >
         {/* MOBILE */}
-        <div className="mt-50 w-full sm:hidden">
+        <div className="mt-10 w-full sm:hidden">
           <video
             className="
         mx-auto
         aspect-[9/16]
-        max-h-[80dvh]
+        max-h-120
         w-auto
         max-w-full
         rounded-sm
         object-cover
+        
       "
             controls
             playsInline
@@ -208,13 +209,14 @@ export default function SecTwo() {
         </div>
 
         {/* TABLET + DESKTOP */}
-        <div className="mt-20 hidden w-full sm:block">
+        <div className="mt-20 lg:mt-0 hidden w-full sm:block">
           <video
             className="
         mx-auto
         aspect-video
         w-full
-        max-w-4xl
+        md:max-w-5xl
+        lg:max-w-6xl
         rounded-sm
         object-cover
       "
