@@ -15,7 +15,7 @@ export default function Footer() {
               Brytningstid
             </Link>
 
-            <p className="mt-4 max-w-xs leading-6">
+            <p className="mt-4 max-w-xs leading-6 line-seed-jp-thin">
               En dokumentarfilm av Jakob Hardeberg
             </p>
           </div>
@@ -56,7 +56,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-12 border-t border-gray-200 pt-6">
-          <div className="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
+          <div className="flex flex-col items-center justify-between gap-5 line-seed-jp-thin text-center sm:flex-row sm:text-left">
             <p>
               © {new Date().getFullYear()} Brytningstid. Alle rettigheter
               forbeholdt.

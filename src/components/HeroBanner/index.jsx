@@ -4,6 +4,7 @@ import { FaPlay } from "react-icons/fa";
 import pizza from "../../assets/pizza.png";
 import onePlay from "../../assets/1play.png";
 import twoPlay from "../../assets/2play.png";
+import vhs from "../../assets/vhs.png";
 
 export default function Herobanner() {
   return (
@@ -25,7 +26,7 @@ export default function Herobanner() {
       {/* <div className="absolute inset-0 " /> */}
 
       <div className="relative z-10  py-40 px-6  sm:p-16 ">
-        <h1 className="text-4xl min-[400px]:text-5xl pb-2 text-sunset-yellow sm:pb-0 sm:text-6xl lg:text-8xl  font-bold font-['Times_New_Roman']">
+        <h1 className="text-[40px] min-[437px]:text-[52px] lg:pb-2 text-sunset-yellow sm:pb-0 sm:text-6xl lg:text-8xl  font-bold font-['Times_New_Roman']">
           BRYTNINGSTID
         </h1>
 
@@ -38,13 +39,12 @@ export default function Herobanner() {
               block: "start",
             });
           }}
-          className="px-2 py-6   cursor-pointer text-center flex flex-row items-center justify-center gap-8"
+          className=" lg:pt-6  cursor-pointer text-center flex flex-row items-center justify-center gap-8"
         >
           {/* --------------- tegne knapp */}
 
-          {/* <div className="group relative w-15 h-15 lg:w-25 lg:h-25 cursor-pointer"> */}
-          {/* Normal */}
-          {/* <img
+          {/* <div className="group relative w-15 h-15 lg:w-25 lg:h-25 cursor-pointer">
+            <img
               src={onePlay}
               alt="Spill av trailer"
               className="
@@ -54,10 +54,9 @@ export default function Herobanner() {
               transition-opacity duration-200
               group-hover:opacity-0
     "
-            /> */}
+            />
 
-          {/* Hover */}
-          {/* <img
+            <img
               src={twoPlay}
               alt=""
               className="
@@ -68,33 +67,33 @@ export default function Herobanner() {
               transition-opacity duration-200
               group-hover:opacity-100
     "
-            /> */}
-          {/* </div> */}
+            />
+          </div> */}
 
-          <div className="flex  items-center gap-4  ">
-            {/* --------------- pizza knapp */}
+          <div className="group relative inline-block cursor-pointer">
             <img
-              src={pizza}
+              src={vhs}
               alt="Spill av trailer"
-              className=" 
-             
-            inset-0
-            w-16
-            h-16
-            lg:w-24
-            lg:h-24
-            object-fill
-            z-0
-             transition-transform duration-300
-              hover:scale-120 
-           
-          "
+              className="
+      w-22 sm:w-28 h-auto
+      lg:w-32
+      transition-transform duration-300
+      group-hover:scale-120
+    "
             />
 
-            {/* --------------- play tekst knapp */}
-
-            {/* <FaPlay className="text-3xl lg:text-4xl" /> */}
-            <h2 className="text-3xl lg:text-4xl text-center play-button">
+            <h2
+              className="
+               top-[4%] 
+      absolute
+      inset-0
+      flex items-center justify-center
+      text-base sm:text-xl
+      play-button
+      transition-transform duration-300
+      group-hover:scale-120
+    "
+            >
               PLAY
             </h2>
           </div>

@@ -78,48 +78,67 @@ body {
   font-style: normal;
 }
 
+.google-sans {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+.line-seed-jp-thin {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.line-seed-jp-regular {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* ------------------------- */
 
 .nav-links-style {
-  font-family: "Times New Roman", Times, serif;
-  text-transform: uppercase;
+  font-family: "Lacquer", system-ui;
+
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 200;
   font-style: normal;
-  font-size: 18px;
-  color: var(--color-sea-blue);
+
+  color: white;
 }
 
 .nav-links-style:hover {
-  color: white;
+  color: var(--color-sunset-yellow);
   transition: 0.5s;
   cursor: pointer;
 }
 
 .play-button {
-  font-family: "Reenie Beanie", cursive;
-  text-transform: uppercase;
+  font-family: "Lacquer", system-ui;
+
   font-style: none;
-  letter-spacing: -1px;
-  font-weight: 500;
+
+  font-weight: 200;
   font-style: normal;
 
-  color: white;
-  transition: 0.3s;
+  color: black;
 }
 
 .text-paper {
   color: var(--color-space-blue);
-  font-family: "Sedgwick Ave Display", cursive;
+  font-family: "Lacquer", system-ui;
   /* text-transform: uppercase; */
   font-weight: 200;
 }
 
 .mobile-text {
   color: white;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Lacquer", system-ui;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 400;
   /* text-transform: uppercase; */
 }
 
@@ -129,22 +148,21 @@ body {
   letter-spacing: 2px;
   font-weight: 600;
   font-style: normal;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
 }
 
 .footer-links-style {
-  font-family: "Times New Roman", Times, serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
+  font-family: "LINE Seed JP", sans-serif;
+
+  font-weight: 100;
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
 }
 
 .footer-links-style:hover {
-  color: var(--color-sea-blue);
+  color: var(--color-sunset-yellow);
   transition: 0.5s;
   cursor: pointer;
 }

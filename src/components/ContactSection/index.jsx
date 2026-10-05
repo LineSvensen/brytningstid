@@ -4,8 +4,8 @@ import { HiOutlineArrowUpRight } from "react-icons/hi2";
 
 export default function ContactSec() {
   return (
-    <section className="my-8 sm:my-12 flex flex-col items-center justify-center py-2 sm:py-12 font-['Times_New_Roman']">
-      <h2 className="mb-4 text-center text-3xl sm:text-4xl font-bold uppercase">
+    <section className="my-8 sm:my-12 flex flex-col items-center justify-center py-2 sm:py-12 line-seed-jp-thin">
+      <h2 className="mb-4 text-center text-3xl sm:text-4xl font-bold uppercase  font-['Times_New_Roman']">
         Kontakt
       </h2>
 
@@ -19,7 +19,7 @@ export default function ContactSec() {
 
       <a
         href="mailto:jakobsvensen700@gmail.com"
-        className="mt-6 inline-flex items-center gap-2 border border-black px-6 py-3 text-lg font-medium transition-colors hover:bg-black hover:text-white"
+        className="mt-6 inline-flex items-center gap-2 border border-black px-6 py-3 text-lg  transition-colors hover:bg-black hover:text-white"
       >
         jakobsvensen700@gmail.com
         <HiOutlineArrowUpRight aria-hidden="true" />
@@ -30,7 +30,7 @@ export default function ContactSec() {
 
       <a
         href="tel:+4746540448"
-        className="mt-4 inline-flex items-center  px-6 py-3 text-xl cursor-default"
+        className="mt-4 inline-flex items-center  px-6 py-3 text-xl cursor-default "
       >
         +47 465 40 448
       </a>

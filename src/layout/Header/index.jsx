@@ -32,14 +32,14 @@ export default function HeaderNav() {
           });
           setOpen(false);
         }}
-        className="px-2 py-1 text-left nav-links-style"
+        className="px-2 py-1 text-left nav-links-style text-base sm:text-lg"
       >
         Se Trailer
       </button>
 
       <NavLink
         to="/om"
-        className="px-2 py-1 nav-links-style"
+        className="px-2 py-1 nav-links-style  text-base sm:text-lg"
         onClick={() => setOpen(false)}
       >
         Om Jakob Hardeberg
@@ -47,7 +47,7 @@ export default function HeaderNav() {
 
       <NavLink
         to="/prosjekter"
-        className="px-2 py-1 nav-links-style"
+        className="px-2 py-1 nav-links-style  text-base sm:text-lg"
         onClick={() => setOpen(false)}
       >
         Andre prosjekter
@@ -59,7 +59,7 @@ export default function HeaderNav() {
     <header className="fixed top-6 left-3 z-50 w-full flex  pl-4 text-white">
       {!collapsed ? (
         <nav className="px-4 py-4 lg:px-8 lg:py-6 text-sm">
-          <div className="flex flex-col lg:flex-row text-left gap-1 lg:gap-20 lg:items-center lg:text-center">
+          <div className="flex flex-col lg:flex-row text-left gap-0 lg:gap-20 lg:items-center lg:text-center">
             {links}
           </div>
         </nav>
