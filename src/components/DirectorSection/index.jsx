@@ -12,7 +12,7 @@ export default function DirSec() {
             <h3 className="pb-8  sm:pb-12 text-4xl uppercase font-bold">
               Jakob Hardeberg
             </h3>
-            <p className=" sm:pr-8  text-lg ">
+            <p className=" sm:pr-8  text-lg line-seed-jp-thin ">
               Jakob Hardeberg (f.1998) er utdannet dokumentarregissør ved
               TV-skolen på Lillehammer i 2021. Han har siden den gang jobbet som
               dokumentarist og fotograf. Arbeidene hans kretser ofte rundt
@@ -23,7 +23,11 @@ export default function DirSec() {
             </p>
           </div>
 
-          <img src={jhImg} alt="Jakob Hardeberg" className="w-60 sm:w-90 md:w-100 sm:pt-8 lg:pt-20 "></img>
+          <img
+            src={jhImg}
+            alt="Jakob Hardeberg"
+            className="w-60 sm:w-90 md:w-100 sm:pt-8 lg:pt-20 "
+          ></img>
         </div>
       </div>
     </section>
