@@ -1,6 +1,6 @@
 import ScrollReveal from "../ScrollReveal";
 import bg2 from "../../assets/bluebg.webp";
-import desktopTrailer from "../../assets/trailer-brytningstid.mp4";
+import desktopTrailer from "../../assets/trailer-brytningstid.webm";
 import mobileTrailer from "../../assets/trailer-brytningstid.mp4";
 
 import bgSky from "../../assets/bgbg.png";
