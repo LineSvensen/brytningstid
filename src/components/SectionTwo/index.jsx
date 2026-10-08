@@ -1,7 +1,7 @@
 import ScrollReveal from "../ScrollReveal";
 import bg2 from "../../assets/bluebg.webp";
-import desktopTrailer from "../../assets/test-hero.webm";
-import mobileTrailer from "../../assets/mob-trailer.mp4";
+import desktopTrailer from "../../assets/trailer-brytningstid.webm";
+// import mobileTrailer from "../../assets/trailer-brytningstid.mp4";
 
 import bgSky from "../../assets/bgbg.png";
 import imgTrePersTo from "../../assets/kopi-bg.jpg";
@@ -196,7 +196,7 @@ export default function SecTwo() {
         className="relative flex items-center justify-center bg-black px-4 py-4"
       >
         {/* MOBILE */}
-        <div className="mt-10 w-full sm:hidden">
+        {/* <div className="mt-10 w-full sm:hidden">
           <video
             className="
         mx-auto
@@ -214,10 +214,10 @@ export default function SecTwo() {
             <source src={mobileTrailer} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        </div>
+        </div> */}
 
         {/* TABLET + DESKTOP */}
-        <div className="mt-20 lg:mt-0 hidden w-full sm:block">
+        <div className="mt-40  sm:mt-0  w-full ">
           <video
             className="
         mx-auto
