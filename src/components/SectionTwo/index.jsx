@@ -217,7 +217,7 @@ export default function SecTwo() {
         </div> */}
 
         {/* TABLET + DESKTOP */}
-        <div className="mt-40  sm:mt-0  w-full ">
+        <div className="mt-50 mb-40 sm:mb-0  sm:mt-0  w-full ">
           <video
             className="
         mx-auto
