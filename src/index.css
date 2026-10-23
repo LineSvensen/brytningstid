@@ -5,7 +5,7 @@
 } */
 
 @theme {
-  --color-space-blue: #0f294f;
+  --color-space-blue: #060f1c;
   --color-moon-blue: #1c4c93;
   --color-sky-blue: #1060a3;
   --color-sea-blue: #78b1d9;
@@ -121,10 +121,10 @@ body {
 
   font-style: none;
 
-  font-weight: 200;
+  font-weight: 900;
   font-style: normal;
 
-  color: black;
+  color: #070707e6;
 }
 
 .text-paper {
@@ -143,10 +143,10 @@ body {
 }
 
 .footer-headings {
-  font-family: "Times New Roman", Times, serif;
-  text-transform: uppercase;
+  font-family: "Lacquer", system-ui;
+
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
   font-size: 16px;
   color: white;

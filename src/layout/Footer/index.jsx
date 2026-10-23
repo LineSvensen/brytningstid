@@ -3,7 +3,7 @@ import koderaImg from "../../assets/Kodera-logo-hvit.svg";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-gray-200 bg-black text-base text-white font-['Times_New_Roman']">
+    <footer className="mt-auto border-t border-gray-200 bg-space-blue text-base text-white font-['Times_New_Roman']">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 border-t border-gray-200 pt-6">
+        <div className="mt-12 border-t border-gray-200/50 pt-6 text-sm">
           <div className="flex flex-col items-center justify-between gap-5 line-seed-jp-thin text-center sm:flex-row sm:text-left">
             <p>
               © {new Date().getFullYear()} Brytningstid. Alle rettigheter
