@@ -30,7 +30,7 @@ export default function ContactSec() {
 
       <a
         href="tel:+4746540448"
-        className="mt-4 inline-flex items-center  px-6 py-3 text-xl cursor-default "
+        className="mt-1 inline-flex items-center  px-6 py-3 text-xl cursor-default "
       >
         +47 465 40 448
       </a>

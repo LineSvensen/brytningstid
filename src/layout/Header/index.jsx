@@ -45,13 +45,13 @@ export default function HeaderNav() {
         Om Jakob Hardeberg
       </NavLink>
 
-      <NavLink
+      {/* <NavLink
         to="/prosjekter"
         className="px-2 py-1 nav-links-style  text-base sm:text-lg"
         onClick={() => setOpen(false)}
       >
         Andre prosjekter
-      </NavLink>
+      </NavLink> */}
     </>
   );
 
