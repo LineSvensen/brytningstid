@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GrClose } from "react-icons/gr";
 import wheelOne from "../../assets/menu-1.png";
@@ -8,6 +8,8 @@ import wheelTwo from "../../assets/menu-2.png";
 export default function HeaderNav() {
   const [collapsed, setCollapsed] = useState(false);
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isOmPage = location.pathname === "/om";
 
   useEffect(() => {
     function handleScroll() {
@@ -42,13 +44,13 @@ export default function HeaderNav() {
       </button>
 
       <NavLink
-        to="/om"
+        to={isOmPage ? "/" : "/om"}
         className={`px-2 py-1 text-base sm:text-lg ${
           isBurgerMenu ? "menu-text" : "nav-links-style"
         }`}
         onClick={() => setOpen(false)}
       >
-        Om Jakob Hardeberg
+        {isOmPage ? "Tilbake til forsiden" : "Om Jakob Hardeberg"}
       </NavLink>
     </>
   );
@@ -56,7 +58,7 @@ export default function HeaderNav() {
   return (
     <header
       className={`
-    fixed top-6 left-0 z-50 w-full flex text-white 
+    fixed top-6 left-0 z-50 w-full flex text-egg 
     transition-all duration-300
 
     ${

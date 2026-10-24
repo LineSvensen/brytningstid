@@ -12,6 +12,8 @@
   --color-teal: #2883a2;
 
   --color-egg: #faedd6;
+  --color-egg-light: #fdf8ee;
+   
 
   --color-sunset-yellow: #ffb300;
   --color-sunset-orange: #f7731b;
@@ -109,7 +111,7 @@ body {
   font-weight: 200;
   font-style: normal;
 
-  color: white;
+  color: var(--color-egg);
 }
 
 .nav-links-style:hover {
@@ -153,7 +155,7 @@ body {
 }
 
 .mobile-text {
-  color: white;
+  color: var(--color-egg);
   font-family: "Lacquer", system-ui;
   font-size: 20px;
   font-weight: 400;
@@ -167,7 +169,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  color: white;
+  color: var(--color-egg);
 }
 
 .footer-links-style {
@@ -176,7 +178,7 @@ body {
   font-weight: 100;
   font-style: normal;
   font-size: 16px;
-  color: white;
+  color: var(--color-egg);
 }
 
 .footer-links-style:hover {

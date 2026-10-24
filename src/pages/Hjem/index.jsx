@@ -15,7 +15,7 @@ import SecThree from "../../components/SectionThree";
 
 //       {/* innhold */}
 //       <div className="relative z-10 h-full flex items-center justify-center">
-//         <h1 className="text-white text-5xl">{title}</h1>
+//         <h1 className="text-egg text-5xl">{title}</h1>
 //       </div>
 
 //       {/* 👇 SAFE AREA nederst */}
@@ -33,7 +33,7 @@ export default function Home() {
         <SecOne />
       </div>
 
-      <div className="relative z-20">
+      <div className="relative z-20 ">
         <SecTwo />
       </div>
 
