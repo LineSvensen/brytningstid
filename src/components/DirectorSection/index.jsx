@@ -6,7 +6,7 @@ export default function DirSec() {
       <div className="flex flex-col  justify-center items-center text-center md:text-left">
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 ">
           <div className=" lg:w-210  ">
-            <h2 className="pb-4 text-2xl pt-8 md:pt-0 uppercase font-bold">
+            <h2 className="pb-4 text-2xl pt-8 md:pt-0 lacquer-regular">
               Om regissøren{" "}
             </h2>
             <h3 className="pb-8  sm:pb-12 text-4xl uppercase font-bold">

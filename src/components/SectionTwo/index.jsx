@@ -1,3 +1,5 @@
+import { useRef, useState } from "react";
+import { FaPlay } from "react-icons/fa";
 import ScrollReveal from "../ScrollReveal";
 import bg2 from "../../assets/bluebg.webp";
 import desktopTrailer from "../../assets/trailer-brytningstid.webm";
@@ -16,9 +18,13 @@ import pinkLighter from "../../assets/lighterpink.png";
 import chips from "../../assets/chips.png";
 import spar from "../../assets/spar.png";
 
+import trailerPoster from "../../assets/bryt-1.webp";
+
 // import { motion } from "framer-motion";
 
 export default function SecTwo() {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <>
       <section
@@ -217,23 +223,74 @@ export default function SecTwo() {
         </div> */}
 
         {/* TABLET + DESKTOP */}
-        <div className="mt-50 mb-40 sm:mb-0  sm:mt-0  w-full ">
-          <video
+        <div className="mt-50 mb-40 sm:mb-0 sm:mt-0 w-full">
+          <div
             className="
-        mx-auto
-        aspect-video
-        w-full
-        md:max-w-5xl
-        lg:max-w-6xl
-        rounded-sm
-        object-cover
-      "
-            controls
-            playsInline
+      relative
+      mx-auto
+      w-full
+      aspect-video
+      md:max-w-5xl
+      lg:max-w-6xl
+      overflow-hidden
+      rounded-sm
+      group
+    "
           >
-            <source src={desktopTrailer} type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
+            <video
+              ref={videoRef}
+              className="w-full h-full object-cover"
+              controls={isPlaying}
+              playsInline
+              preload="metadata"
+              poster={trailerPoster}
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+              onEnded={() => setIsPlaying(false)}
+            >
+              <source src={desktopTrailer} type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+
+            {!isPlaying && (
+              <button
+                type="button"
+                aria-label="Spill av trailer"
+                onClick={() => videoRef.current?.play()}
+                className="
+          absolute
+          inset-0
+          z-10
+          flex
+          items-center
+          justify-center
+          cursor-pointer
+          bg-black/10
+          hover:bg-black/20
+          transition-all
+          duration-300
+        "
+              >
+                <span
+                  className="
+            flex
+            items-center
+            justify-center
+            w-20 h-20
+            sm:w-24 sm:h-24
+            rounded-full
+            bg-white/85
+            text-black
+            transition-transform
+            duration-300
+            group-hover:scale-110
+          "
+                >
+                  <FaPlay className="text-3xl ml-1" />
+                </span>
+              </button>
+            )}
+          </div>
         </div>
       </section>
     </>

@@ -11,6 +11,8 @@
   --color-sea-blue: #78b1d9;
   --color-teal: #2883a2;
 
+  --color-egg: #faedd6;
+
   --color-sunset-yellow: #ffb300;
   --color-sunset-orange: #f7731b;
   --color-dust-brown: #816038;
@@ -111,6 +113,22 @@ body {
 }
 
 .nav-links-style:hover {
+  color: var(--color-sunset-yellow);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.menu-text {
+  font-family: "Lacquer", system-ui;
+
+  letter-spacing: 2px;
+  font-weight: 200;
+  font-style: normal;
+
+  color: black;
+}
+
+.menu-text:hover {
   color: var(--color-sunset-yellow);
   transition: 0.5s;
   cursor: pointer;
