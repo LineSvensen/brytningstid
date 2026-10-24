@@ -9,9 +9,9 @@ export default function ContactSec() {
         Kontakt
       </h2>
 
-      <p className="mb-8 text-center px-8 text-lg  ">
+      <p className="mb-8 mt-2 text-center px-8 text-lg lacquer-regular ">
         Om du har spørsmål, er interessert i samarbeid eller ønsker å ta en
-        uformell kaffe
+        uformell kaffe:
       </p>
 
       {/* Email */}

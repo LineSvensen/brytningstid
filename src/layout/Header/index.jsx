@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GrClose } from "react-icons/gr";
+import wheelOne from "../../assets/menu-1.png";
+import wheelTwo from "../../assets/menu-2.png";
 
 export default function HeaderNav() {
   const [collapsed, setCollapsed] = useState(false);
@@ -22,7 +24,7 @@ export default function HeaderNav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const links = (
+  const links = (isBurgerMenu = false) => (
     <>
       <button
         onClick={() => {
@@ -32,54 +34,69 @@ export default function HeaderNav() {
           });
           setOpen(false);
         }}
-        className="px-2 py-1 text-left nav-links-style text-base sm:text-lg"
+        className={`px-2 py-1 text-base sm:text-lg ${
+          isBurgerMenu ? "menu-text" : "nav-links-style"
+        }`}
       >
         Se Trailer
       </button>
 
       <NavLink
         to="/om"
-        className="px-2 py-1 nav-links-style  text-base sm:text-lg"
+        className={`px-2 py-1 text-base sm:text-lg ${
+          isBurgerMenu ? "menu-text" : "nav-links-style"
+        }`}
         onClick={() => setOpen(false)}
       >
         Om Jakob Hardeberg
       </NavLink>
-
-      {/* <NavLink
-        to="/prosjekter"
-        className="px-2 py-1 nav-links-style  text-base sm:text-lg"
-        onClick={() => setOpen(false)}
-      >
-        Andre prosjekter
-      </NavLink> */}
     </>
   );
 
   return (
-    <header className="fixed top-6 left-3 z-50 w-full flex  pl-4 text-white">
+    <header
+      className={`
+    fixed top-6 left-0 z-50 w-full flex text-white 
+    transition-all duration-300
+
+    ${
+      collapsed
+        ? "justify-start pl-6 sm:pl-7"
+        : "justify-center sm:justify-start sm:pl-7"
+    }
+  `}
+    >
       {!collapsed ? (
-        <nav className="px-4 py-4 lg:px-8 lg:py-6 text-sm">
-          <div className="flex flex-col lg:flex-row text-left gap-0 lg:gap-20 lg:items-center lg:text-center">
-            {links}
+        <nav className="px-4 py-4 lg:px-8 lg:py-6 text-sm ">
+          <div className="flex flex-col items-center sm:items-start text-center   gap-0 lg:flex-row lg:gap-20">
+            {links(false)}
           </div>
         </nav>
       ) : (
         <div className="relative">
           <button
             onClick={() => setOpen(!open)}
-            className="bg-black/60 backdrop-blur-md   cursor-pointer  rounded-full transition p-4 text-sm shadow-lg"
+            className="ml-2 mt-2 lg:ml-4 lg:mt-4 cursor-pointer "
           >
             {open ? (
-              <GrClose className="text-3xl" />
+              <img
+                src={wheelTwo}
+                alt="Close Menu"
+                className="h-12 lg:h-16 w-auto object-contain"
+              />
             ) : (
-              <RxHamburgerMenu className="text-3xl" />
+              <img
+                src={wheelOne}
+                alt="Menu"
+                className="h-12 lg:h-16 w-auto object-contain"
+              />
             )}
           </button>
 
           {open && (
-            <nav className="absolute top-19 left-5 bg-black/70 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-lg min-w-56">
-              <div className="flex flex-col gap-3 text-sm text-left">
-                {links}
+            <nav className="absolute top-14 left-14 lg:top-20 lg:left-20 bg-egg   backdrop-blur-md   p-4 shadow-lg min-w-56 menu-text">
+              <div className="flex flex-col gap-3 text-sm text-center items-center">
+                {links(true)}
               </div>
             </nav>
           )}
