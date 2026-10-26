@@ -11,7 +11,7 @@ import { GiRibbonMedal } from "react-icons/gi";
 
 export function SponsSec() {
   return (
-    <div className="bg-olive-50 flex flex-col lg:flex-row items-center justify-evenly">
+    <div className="bg-[#fbf9f5] flex flex-col lg:flex-row items-center justify-evenly">
       <div className="flex flex-col items-center pt-16 pb-4 lg:py-20 ">
         <img src={nfLogo} className="h-full w-35 sm:w-45  "></img>
         <p className="text-base flex flex-col items-center justify-center sm:text-base pt-2 sm:pt-6 w-60 text-center">

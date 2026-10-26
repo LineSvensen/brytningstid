@@ -3,7 +3,7 @@ import koderaImg from "../../assets/Kodera-logo-hvit.svg";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-gray-200 bg-space-blue text-base text-white font-['Times_New_Roman']">
+    <footer className="mt-auto border-t border-gray-200 bg-space-blue text-base text-egg font-['Times_New_Roman']">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}

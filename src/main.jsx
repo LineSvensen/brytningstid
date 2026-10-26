@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import Home from "./pages/Hjem";
+import Om from "./pages/Om";
 
 import "./index.css";
 
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "om",
+        element: <Om />,
       },
     ],
   },

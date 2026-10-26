@@ -195,7 +195,7 @@ export default function SecTwo() {
         <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-b from-transparent to-black pointer-events-none" />
       </section>
 
-      {/* <p className="text-white text-center">hey</p> */}
+      
 
       <section
         id="trailer"
@@ -279,7 +279,7 @@ export default function SecTwo() {
             w-20 h-20
             sm:w-24 sm:h-24
             rounded-full
-            bg-white/85
+            bg-egg/85
             text-black
             transition-transform
             duration-300
@@ -307,7 +307,7 @@ export default function SecTwo() {
 //         className="relative min-h-screen bg-fixed bg-bottom bg-cover flex items-center justify-center"
 //         style={{ backgroundImage: `url(${bg2})` }}
 //       >
-//         <h2 className="text-white text-5xl font-bold"></h2>
+//         <h2 className="text-egg text-5xl font-bold"></h2>
 
 //         {/* Fade fra blått til svart */}
 //         <div

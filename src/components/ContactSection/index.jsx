@@ -19,7 +19,7 @@ export default function ContactSec() {
 
       <a
         href="mailto:jakobsvensen700@gmail.com"
-        className="mt-6 inline-flex items-center gap-2 border border-black px-6 py-3 text-lg  transition-colors hover:bg-black hover:text-white"
+        className="mt-6 inline-flex items-center gap-2 border border-black px-6 py-3 text-lg  transition-colors hover:bg-black hover:text-egg"
       >
         jakobsvensen700@gmail.com
         <HiOutlineArrowUpRight aria-hidden="true" />
