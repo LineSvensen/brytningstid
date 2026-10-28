@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
-import wheelOne from "../../assets/menu-1.png";
-import wheelTwo from "../../assets/menu-2.png";
+import wheelOne from "../../assets/skate2.webp";
+import wheelTwo from "../../assets/skate1.webp";
+
+import paperBg from "../../assets/pap1.webp";
 
 export default function HeaderNav() {
   const [collapsed, setCollapsed] = useState(false);
@@ -13,7 +15,7 @@ export default function HeaderNav() {
 
   const isOmPage = location.pathname === "/om";
 
-  // Handle navbar collapse on scroll
+  // Handle navbar-collapse på scroll
   useEffect(() => {
     function handleScroll() {
       setCollapsed(window.scrollY > 80);
@@ -29,7 +31,7 @@ export default function HeaderNav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to trailer after navigating from another page
+  // For å scrolle til trailer hvis du kommer fra om page feks
   useEffect(() => {
     if (location.pathname !== "/" || location.hash !== "#trailer") {
       return;
@@ -64,7 +66,7 @@ export default function HeaderNav() {
       <button
         type="button"
         onClick={handleTrailerClick}
-        className={`px-2 py-1 text-base sm:text-lg cursor-pointer ${
+        className={`px-2 lg:px-6 py-1 text-base sm:text-lg cursor-pointer ${
           isBurgerMenu ? "menu-text" : "nav-links-style"
         }`}
       >
@@ -96,38 +98,71 @@ export default function HeaderNav() {
       `}
     >
       {!collapsed ? (
-        <nav className="px-4 py-4 lg:px-8 lg:py-6 text-sm">
-          <div className="flex flex-col items-center sm:items-start text-center gap-0 lg:flex-row lg:gap-20">
+        <nav className="px-4 py-4 lg:px-8 lg:py-6 text-sm ">
+          <div className="flex flex-col items-center sm:items-start text-center gap-0  lg:flex-row lg:gap-20">
             {links(false)}
           </div>
         </nav>
       ) : (
         <div className="relative">
+          {/* Burgerknappen */}
           <button
             type="button"
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen((prev) => !prev)}
             aria-label={open ? "Lukk meny" : "Åpne meny"}
             aria-expanded={open}
-            className="ml-2 mt-2 lg:ml-4 lg:mt-4 cursor-pointer"
+            className="
+      relative z-20
+      flex items-center justify-center
+      w-14 h-14
+      shrink-0
+      mt-2
+      cursor-pointer
+      bg-egg/90
+      rounded-full
+      shadow-lg
+      p-3
+    "
           >
-            {open ? (
-              <img
-                src={wheelTwo}
-                alt=""
-                className="h-12 lg:h-16 w-auto object-contain"
-              />
-            ) : (
-              <img
-                src={wheelOne}
-                alt=""
-                className="h-12 lg:h-16 w-auto object-contain"
-              />
-            )}
+            <img
+              src={open ? wheelTwo : wheelOne}
+              alt=""
+              className="block w-8 h-8 object-contain"
+            />
           </button>
 
+          {/* Notislappmeny */}
           {open && (
-            <nav className="absolute top-14 left-14 lg:top-20 lg:left-20 bg-egg backdrop-blur-md p-4 shadow-lg min-w-56 menu-text">
-              <div className="flex flex-col gap-3 text-sm text-center items-center">
+            <nav
+              aria-label="Mobilmeny"
+              className="
+        absolute
+        top-12 left-0
+        w-64
+        z-10
+      "
+            >
+              <img
+                src={paperBg}
+                alt=""
+                className="
+          block
+          w-full h-auto
+          drop-shadow-xl
+          pointer-events-none
+        "
+              />
+
+              <div
+                className="
+          absolute inset-0
+          flex flex-col
+          items-center justify-center
+          gap-3
+          px-8 py-8
+          text-center
+        "
+              >
                 {links(true)}
               </div>
             </nav>
