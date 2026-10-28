@@ -233,7 +233,7 @@ export default function SecTwo() {
       md:max-w-5xl
       lg:max-w-6xl
       overflow-hidden
-      rounded-sm
+       
       group
     "
           >

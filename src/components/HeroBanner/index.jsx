@@ -2,9 +2,8 @@ import imgOne from "../../assets/posterdesktop.webp";
 import vidOne from "../../assets/PILOT3.mp4";
 import { FaPlay } from "react-icons/fa";
 import pizza from "../../assets/pizza.png";
-import onePlay from "../../assets/1play.png";
-import twoPlay from "../../assets/2play.png";
-import vhs from "../../assets/vhs.png";
+
+import vhs from "../../assets/vhs.webp";
 
 export default function Herobanner() {
   return (
@@ -33,8 +32,8 @@ export default function Herobanner() {
     flex flex-col
     items-center
     justify-end
-    gap-8
-    px-6 pb-40 lg:pl-16
+    gap-4
+    px-6 pb-30 lg:pb-28 lg:pl-16
 
     lg:items-start
      
@@ -50,7 +49,7 @@ export default function Herobanner() {
       font-bold
       font-['Times_New_Roman']
       text-center
-      lg:text-left
+      lg:text-left lg:pl-7
     "
         >
           BRYTNINGSTID
@@ -65,13 +64,11 @@ export default function Herobanner() {
             });
           }}
           className="
-      relative
+       
       z-40
       cursor-pointer
 
-      lg:absolute
-      lg:bottom-16
-      lg:right-10
+       
     "
         >
           <div

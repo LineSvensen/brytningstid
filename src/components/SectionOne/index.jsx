@@ -1,17 +1,18 @@
 import bg1 from "../../assets/bgpink.webp";
 import imgTrePers from "../../assets/photos.png";
-import imgTrePersTo from "../../assets/kopi-bg.jpg";
 import bgSky from "../../assets/bgbg.png";
-import bgPapir from "../../assets/pap.png";
 import bgPapMob from "../../assets/pap-mob.png";
 import stuff from "../../assets/stuff.png";
 import chain from "../../assets/chain.png";
 import sharpie from "../../assets/sharpie.png";
 import blackHeart from "../../assets/blackheart.png";
 import yellowHeart from "../../assets/yellowheart.png";
-import pinkLighter from "../../assets/lighterpink.png";
-import chips from "../../assets/chips.png";
 import spar from "../../assets/spar.png";
+
+import imgTrePersTo from "../../assets/kopi-bg.webp";
+import bgPapir from "../../assets/pap.webp";
+import pinkLighter from "../../assets/lighterpink.webp";
+import chips from "../../assets/chips.webp";
 
 // import { motion } from "framer-motion";
 
@@ -52,22 +53,6 @@ export default function SecOne() {
           max-w-full
         "
       >
-        {/* PAPIR - MOBILE + TABLET ---------------------------------------*/}
-        {/* <img
-          src={bgPapMob}
-          alt=""
-          className="
-            absolute
-            inset-0
-            z-0
-            h-full
-            w-full
-            
-            object-fill
-            lg:hidden
-          "
-        /> */}
-
         {/* PAPIR - DESKTOP */}
         <img
           src={bgPapir}
@@ -165,50 +150,4 @@ export default function SecOne() {
       </div>
     </div>
   );
-}
-
-// import bg1 from "../../assets/bgpink.webp";
-// import bg1Mobile from "../../assets/ping.png";
-// import imgTrePers from "../../assets/trepers.png";
-
-// export default function SecOne() {
-//   return (
-//     <>
-//       {/* MOBILE - eget bilde*/}
-//       <section className="sm:hidden bg-bottom object-bottom">
-//         <img
-//           src={imgTrePers}
-//           alt=""
-//           className="absolute object-bottom w-full h-auto "
-//         />
-//       </section>
-
-//       {/* SM OG OPPOVER eget bilde */}
-//       <section
-//         className=" min-h-screen bg-fixed bg-cover bg-bottom"
-//         style={{ backgroundImage: `url(${bg1})` }}
-//       />
-
-//       <div className="flex justify-center items-center px-4 pb-4 pt-4 md:pt-20 bg-[#EDCBBC] ">
-//         {/* style={{ backgroundImage: `url(${bg1})` }} */}
-//         <p className="text-[#483F52] text-center max-w-5xl text-2xl sm:text-4xl p-4 md:pb-20">
-//           I Brytningstid møter vi 16 år gamle Billie, Angelo og Erik som står
-//           midt i overgangen mellom barn og voksen. Filmen undersøker hvordan de
-//           forstår seg selv gjennom de små øyeblikkene der livet skjer før man
-//           helt klarer å sette ord på det. Brytningtid er et portrett av det å
-//           være ung - en film om nærhet, vennskap og alt det som gjør
-//           ungdomstiden både intens og tidløs.
-//         </p>
-//       </div>
-//     </>
-//   );
-// }
-
-{
-  /* <section
-  className="min-h-[100svh] flex flex-col bg-fixed bg-bottom bg-cover"
-  style={{ backgroundImage: `url(${bg1})` }}
->
-
-</section>; */
 }
