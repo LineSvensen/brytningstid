@@ -15,7 +15,7 @@ export default function HeaderNav() {
 
   const isOmPage = location.pathname === "/om";
 
-  // Handle navbar-collapse på scroll
+  // Navbar-collapse på scroll
   useEffect(() => {
     function handleScroll() {
       setCollapsed(window.scrollY > 80);
@@ -31,22 +31,7 @@ export default function HeaderNav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // For å scrolle til trailer hvis du kommer fra om page feks
-  useEffect(() => {
-    if (location.pathname !== "/" || location.hash !== "#trailer") {
-      return;
-    }
-
-    const frame = requestAnimationFrame(() => {
-      document.getElementById("trailer")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
-
-    return () => cancelAnimationFrame(frame);
-  }, [location.pathname, location.hash]);
-
+  // TRAILER NAV --------------------------------------
   // Handle trailer button
   const handleTrailerClick = () => {
     setOpen(false);
@@ -60,6 +45,41 @@ export default function HeaderNav() {
       });
     }
   };
+  // ---------------------------------------
+  // ---------------BEGGE-----------------
+  // For å scrolle til en section på home hvis du kommer fra OM page feks
+  useEffect(() => {
+    if (location.pathname !== "/") return;
+
+    const id = location.hash.replace("#", "");
+
+    if (!["trailer", "contact"].includes(id)) return;
+
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [location.pathname, location.hash]);
+  //  --------------------------------------
+  // KONTAKT --------------------------------------
+  // Handle trailer button
+  const handleContactClick = () => {
+    setOpen(false);
+
+    if (location.pathname !== "/") {
+      navigate("/#contact");
+    } else {
+      document.getElementById("contact")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+  // ---------------------------------------
 
   const links = (isBurgerMenu = false) => (
     <>
@@ -82,6 +102,16 @@ export default function HeaderNav() {
       >
         {isOmPage ? "Tilbake til forsiden" : "Om Jakob Hardeberg"}
       </NavLink>
+
+      <button
+        type="button"
+        onClick={handleContactClick}
+        className={`px-2 lg:px-6 py-1 text-base sm:text-lg cursor-pointer ${
+          isBurgerMenu ? "menu-text" : "nav-links-style"
+        }`}
+      >
+        Kontakt
+      </button>
     </>
   );
 

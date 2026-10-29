@@ -7,7 +7,10 @@ import letter from "../../assets/letter.webp";
 
 export default function ContactSec() {
   return (
-    <section className="my-8 sm:my-12 flex flex-col items-center justify-center py-2 lg:py-16 line-seed-jp-thin lg:pb-16">
+    <section
+      className="my-8 sm:my-12 flex flex-col items-center justify-center py-2 lg:py-16 line-seed-jp-thin lg:pb-16"
+      id="contact"
+    >
       {/* <img src={pen} alt="pen-image" className="w-40 rotate-160 mb-4"></img> */}
       <h2 className="mb-8 text-center text-3xl sm:text-4xl font-bold uppercase  font-['Times_New_Roman']">
         Kontakt
