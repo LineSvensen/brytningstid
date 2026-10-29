@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Hjem";
 import Om from "./pages/Om";
+import Personvern from "./pages/Personvern";
 
 import "./index.css";
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <NotFound />,
+      },
+      {
+        path: "personvern",
+        element: <Personvern />,
       },
     ],
   },

@@ -32,6 +32,10 @@ export default function Footer() {
               <a href="#regissor" className=" footer-links-style">
                 Regissøren
               </a>
+
+              <Link to="/personvern" className="footer-links-style">
+                Personvern
+              </Link>
             </nav>
           </div>
 
