@@ -31,9 +31,9 @@ export default function Herobanner() {
     w-full
     flex flex-col
     items-center
-    justify-end
+    justify-center text-center
     gap-4
-    px-6 pb-30 lg:pb-28 lg:pl-16
+    px-6 pb-40 lg:pb-28 lg:pl-16
 
     lg:items-start
      

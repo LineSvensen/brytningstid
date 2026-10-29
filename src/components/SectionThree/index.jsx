@@ -2,7 +2,7 @@ import bg3 from "../../assets/bg-03.webp";
 import DirSec from "../DirectorSection";
 import ContactSec from "../ContactSection";
 import { SponsSec } from "../Sponsors";
-import stuff from "../../assets/stuff.png";
+import stuff from "../../assets/stuff.webp";
 
 export default function SecThree() {
   return (
