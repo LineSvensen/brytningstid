@@ -30,19 +30,17 @@ export default function Personvern() {
               Behandlingsansvarlig
             </h2>
             <p>
-              [Navn på behandlingsansvarlig] er ansvarlig for behandling av
-              personopplysninger knyttet til nettsiden.
+              Jakob Hardeberg er ansvarlig for behandling av personopplysninger
+              knyttet til nettsiden.
             </p>
-            <p className="mt-3">Kontakt: [E-postadresse]</p>
+            <p className="mt-3">Kontakt: jakobsvensen700@gmail.com</p>
           </section>
 
           <section>
             <h2 className="text-xl font-['Times_New_Roman'] uppercase font-bold text-sunset-yellow mb-3">
               Hvilke opplysninger behandles?
             </h2>
-            <p>
-              Nettsiden krever ingen registrering og har ikke kontaktskjema.
-            </p>
+            <p>Nettsiden krever ingen registrering.</p>
             <p className="mt-3">
               Ved besøk kan tekniske opplysninger, som IP-adresse, nettlesertype
               og informasjon om forespørsler til nettsiden, behandles av vår
