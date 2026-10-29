@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+/* ---------- Lokale fonter ---------- */
+
+@font-face {
+  font-family: "Lacquer";
+  src: url("/fonts/Lacquer-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("/fonts/LINESeedJP-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("/fonts/LINESeedJP-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* @theme {
   --color-white: #ffffff;
 } */
@@ -13,7 +39,6 @@
 
   --color-egg: #faedd6;
   --color-egg-light: #fdf8ee;
-   
 
   --color-sunset-yellow: #ffb300;
   --color-sunset-orange: #f7731b;
@@ -35,7 +60,7 @@ body {
 /* ----------Fonts--------------- */
 
 .lacquer-regular {
-  font-family: "Lacquer", system-ui;
+  font-family: "Lacquer";
   font-weight: 400;
   font-style: normal;
 }
@@ -108,7 +133,7 @@ body {
   font-family: "Lacquer", system-ui;
 
   letter-spacing: 2px;
-  font-weight: 200;
+  font-weight: 400;
   font-style: normal;
 
   color: var(--color-egg);
@@ -124,7 +149,7 @@ body {
   font-family: "Lacquer", system-ui;
 
   letter-spacing: 2px;
-  font-weight: 200;
+  font-weight: 400;
   font-style: normal;
 
   color: black;
@@ -141,7 +166,7 @@ body {
 
   font-style: none;
 
-  font-weight: 900;
+  font-weight: 400;
   font-style: normal;
 
   color: #070707e6;
@@ -151,7 +176,7 @@ body {
   color: var(--color-space-blue);
   font-family: "Lacquer", system-ui;
   /* text-transform: uppercase; */
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .mobile-text {
