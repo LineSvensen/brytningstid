@@ -1,4 +1,5 @@
-import bg3 from "../../assets/bg-03.webp";
+import bg3 from "../../assets/mob-bg-3.webp";
+import bg3Desktop from "../../assets/bg-03.webp";
 import DirSec from "../DirectorSection";
 import ContactSec from "../ContactSection";
 import { SponsSec } from "../Sponsors";
@@ -8,8 +9,23 @@ export default function SecThree() {
   return (
     <>
       <section
-        className="min-h-[100dvh]  bg-fixed bg-bottom bg-cover flex items-center justify-center"
-        style={{ backgroundImage: `url(${bg3})` }}
+        className="
+    min-h-[100vh]
+    bg-bottom
+    bg-contain sm:bg-cover
+    bg-no-repeat
+    bg-position-[center_bottom_60px] sm:bg-position-[center_bottom_0px]
+     bg-fixed
+    max-sm:bg-[image:var(--mobile-bg)]
+    sm:bg-[image:var(--desktop-bg)]
+    flex
+    items-center
+    justify-center
+  "
+        style={{
+          "--mobile-bg": `url(${bg3})`,
+          "--desktop-bg": `url(${bg3Desktop})`,
+        }}
       >
         <img
           src={stuff}
