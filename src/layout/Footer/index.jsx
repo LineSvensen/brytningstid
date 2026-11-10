@@ -61,6 +61,9 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-12 border-t border-egg/10 pt-6 text-sm">
           <div className="flex flex-col items-center justify-between gap-5 line-seed-jp-thin text-center sm:flex-row sm:text-left">
+            <p className="text-[10px]">
+              Jakob Hardeberg Svensen Film · Org.nr 928087743
+            </p>
             <p>
               © {new Date().getFullYear()} Brytningstid. Alle rettigheter
               forbeholdt.
