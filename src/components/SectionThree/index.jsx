@@ -9,13 +9,38 @@ export default function SecThree() {
   return (
     <>
       <section
+        className="relative min-h-dvh flex items-center justify-center"
+        style={{ clipPath: "inset(0)" }}
+      >
+        <div
+          className="
+      fixed inset-0 -z-10
+      bg-bottom bg-contain bg-no-repeat
+      bg-position-[center_bottom_60px]
+      sm:bg-cover sm:bg-position-[center_bottom_0px]
+      max-sm:bg-[image:var(--mobile-bg)]
+      sm:bg-[image:var(--desktop-bg)]
+    "
+          style={{
+            "--mobile-bg": `url(${bg3})`,
+            "--desktop-bg": `url(${bg3Desktop})`,
+          }}
+        />
+        <img
+          src={stuff}
+          alt=""
+          className="sm:hidden mt-100 mb-100 w-100 h-100 object-fill z-0"
+        />
+        <h2 className="text-egg text-5xl font-bold"></h2>
+      </section>
+      {/* <section
         className="
     min-h-[100vh]
     bg-bottom
     bg-contain sm:bg-cover
     bg-no-repeat
     bg-position-[center_bottom_60px] sm:bg-position-[center_bottom_0px]
-     bg-fixed
+     sm:bg-fixed
     max-sm:bg-[image:var(--mobile-bg)]
     sm:bg-[image:var(--desktop-bg)]
     flex
@@ -41,7 +66,7 @@ export default function SecThree() {
           "
         />
         <h2 className="text-egg  text-5xl font-bold"></h2>
-      </section>
+      </section> */}
 
       <section className=" pt-8 lg:pt-0  bg-olive-200 text-black flex flex-col items-center justify-center">
         <DirSec />
